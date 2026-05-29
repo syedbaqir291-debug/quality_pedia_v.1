@@ -578,7 +578,7 @@ footer span{color:var(--text3)}
     <p class="sub">Please enter your details to access the complete Quality Tools encyclopedia.</p>
     <div class="form-group">
       <label>Your Name</label>
-      <input type="text" id="inputName" placeholder="e.g. Ali" autocomplete="name"/>
+      <input type="text" id="inputName" placeholder="e.g. Dr. Ali" autocomplete="name"/>
     </div>
     <div class="form-group">
       <label>Organization / Institution</label>
@@ -773,8 +773,7 @@ purpose:'Systematic collection of data to identify patterns, frequencies, and tr
 when:'When you need to collect repeatable data from a process, especially for defect types, error frequency, or occurrence tracking.',
 steps:['Define what you want to measure','Design the check sheet with appropriate rows/columns','Train staff on how to complete it','Collect data consistently over a defined period','Analyze patterns and frequency'],
 benefits:['Simple and inexpensive','Standardizes data collection','Makes patterns visible immediately','No statistical knowledge required'],
-example:'A nurse marks each type of medication error (wrong dose, wrong patient, wrong time) on a check sheet every shift to track frequency.',
-related:['Pareto Chart','Histogram','Control Chart']},
+example:'A nurse marks each type of medication error (wrong dose, wrong patient, wrong time) on a check sheet every shift to track frequency.',related:['Pareto Chart','Histogram','Control Chart']},
 
 {id:'flowchart',name:'Flowchart / Process Map',icon:'📊',cat:'Basic Quality Tools (7 QC)',type:'proactive',tags:['7qc','proactive'],stage:'Process Design & Review',
 desc:'A visual diagram that uses standard symbols to represent the steps, decisions, and flow of a process. Also called a process map or process flow diagram.',
@@ -782,8 +781,7 @@ purpose:'To visualize, understand, and communicate how a process works — ident
 when:'Before implementing a new process, when redesigning an existing one, or when onboarding new staff.',
 steps:['Define the process scope (start and end points)','Gather process knowledge from those who perform it','Map each step using standard flowchart symbols','Identify decision points and branches','Review with stakeholders and refine','Use the map to identify waste or errors'],
 benefits:['Clarifies complex processes','Identifies redundancies and delays','Facilitates training','Baseline for improvement'],
-example:'A hospital maps the entire patient discharge process to identify why some patients wait 4+ hours for discharge paperwork.',
-related:['Value Stream Mapping','Swimlane Diagram','SIPOC','PDCA']},
+example:'A hospital maps the entire patient discharge process to identify why some patients wait 4+ hours for discharge paperwork.',related:['Value Stream Mapping','Swimlane Diagram','SIPOC','PDCA']},
 
 {id:'histogram',name:'Histogram',icon:'📉',cat:'Basic Quality Tools (7 QC)',type:'proactive',tags:['7qc','statistical','proactive'],stage:'Data Analysis',
 desc:'A bar chart that shows the frequency distribution of continuous data. It groups data into intervals (bins) to reveal the shape, spread, and center of a dataset.',
@@ -791,8 +789,7 @@ purpose:'To understand how data is distributed — whether it is normal, skewed,
 when:'When analyzing process output data to determine if a process is performing within acceptable limits.',
 steps:['Collect sufficient data (minimum 50–100 data points)','Determine the range (max–min)','Calculate appropriate number of bins','Count data in each bin','Plot frequency on y-axis, intervals on x-axis','Interpret shape and distribution'],
 benefits:['Reveals data patterns','Identifies process capability','Detects outliers','Supports decision-making'],
-example:'A lab plots turnaround times for test results to see if most fall within the 2-hour target or if there is wide variation.',
-related:['Check Sheet','Scatter Diagram','Control Chart','Pareto Chart']},
+example:'A lab plots turnaround times for test results to see if most fall within the 2-hour target or if there is wide variation.',related:['Check Sheet','Scatter Diagram','Control Chart','Pareto Chart']},
 
 {id:'pareto',name:'Pareto Chart / Analysis',icon:'📈',cat:'Basic Quality Tools (7 QC)',type:'reactive',tags:['7qc','reactive'],stage:'Problem Prioritization',
 desc:'A bar chart combined with a cumulative line that shows the most significant factors in a dataset. Based on the Pareto Principle (80/20 rule): ~80% of problems come from ~20% of causes.',
@@ -800,8 +797,7 @@ purpose:'To prioritize which problems to tackle first by identifying the few cau
 when:'After collecting data on problem categories to decide where to focus improvement efforts.',
 steps:['Collect data on problem types and frequencies','Rank categories from highest to lowest','Calculate cumulative percentages','Draw bars (left to right, largest first)','Add cumulative % line','Focus on categories contributing to first 80%'],
 benefits:['Focuses efforts where impact is greatest','Visual and easy to communicate','Prevents working on trivial issues','Based on data, not opinion'],
-example:'A quality team plots 500 patient complaints. Waiting time (45%), communication (22%), and cleanliness (15%) account for 82% — these are prioritized.',
-related:['Check Sheet','Ishikawa Diagram','RCA','CAPA']},
+example:'A quality team plots 500 patient complaints. Waiting time (45%), communication (22%), and cleanliness (15%) account for 82% — these are prioritized.',related:['Check Sheet','Ishikawa Diagram','RCA','CAPA']},
 
 {id:'ishikawa',name:'Ishikawa / Fishbone / Cause-and-Effect Diagram',icon:'🐟',cat:'Basic Quality Tools (7 QC)',type:'reactive',tags:['7qc','reactive'],stage:'Root Cause Analysis',
 desc:'A visual tool that maps all potential causes of a problem in a structured fish-bone shape. Categories typically include: Man, Machine, Method, Material, Measurement, and Environment (6 Ms).',
@@ -809,8 +805,7 @@ purpose:'To identify, organize, and display all possible root causes contributin
 when:'During root cause analysis (RCA) after an incident, or proactively when designing processes to eliminate failure modes.',
 steps:['Define the problem (the "head" of the fish)','Draw the spine and add main category bones (6 Ms)','Brainstorm causes for each category','Add sub-causes as smaller branches','Analyze to identify most likely root causes','Investigate and verify the root causes'],
 benefits:['Structured brainstorming','Considers multiple cause categories','Visual and easy to understand','Team-based, captures diverse perspectives'],
-example:'After a wrong medication incident, a team creates a fishbone showing causes: untrained staff (Man), similar drug packaging (Material), no double-check policy (Method).',
-related:['5 Whys','RCA','FMEA','Pareto Chart']},
+example:'After a wrong medication incident, a team creates a fishbone showing causes: untrained staff (Man), similar drug packaging (Material), no double-check policy (Method).',related:['5 Whys','RCA','FMEA','Pareto Chart']},
 
 {id:'scatter',name:'Scatter Diagram',icon:'🔵',cat:'Basic Quality Tools (7 QC)',type:'proactive',tags:['7qc','statistical','proactive'],stage:'Correlation Analysis',
 desc:'A graph that plots two variables against each other to reveal whether a relationship or correlation exists between them. Does NOT prove causation.',
@@ -818,8 +813,7 @@ purpose:'To explore whether one variable (a potential cause) is related to anoth
 when:'When investigating if two measurable variables are correlated — e.g., does handwashing frequency affect infection rates?',
 steps:['Identify the two variables to study','Collect paired data (at least 30 pairs)','Plot on x-y axis (cause on x, effect on y)','Look for pattern: positive, negative, or no correlation','Calculate correlation coefficient if needed'],
 benefits:['Reveals hidden relationships','Data-driven, visual','Quick to create and interpret','Identifies variables worth controlling'],
-example:'A hospital plots hand hygiene compliance (x) vs. HAI rates (y) for 12 months to demonstrate the relationship.',
-related:['Histogram','Control Chart','Regression Analysis']},
+example:'A hospital plots hand hygiene compliance (x) vs. HAI rates (y) for 12 months to demonstrate the relationship.',related:['Histogram','Control Chart','Regression Analysis']},
 
 {id:'control-chart',name:'Control Chart',icon:'📉',cat:'Basic Quality Tools (7 QC)',type:'proactive',tags:['7qc','statistical','proactive'],stage:'Process Monitoring',
 desc:'A time-series chart with a central line (average) and upper/lower control limits (UCL/LCL) derived from statistical analysis. Distinguishes common cause variation from special cause variation.',
@@ -827,8 +821,7 @@ purpose:'To monitor process stability over time and detect unusual variation req
 when:'For ongoing monitoring of any measurable process — infection rates, wait times, errors, patient falls.',
 steps:['Decide what process to monitor','Collect baseline data (20–25 data points)','Calculate mean, UCL, and LCL','Plot data over time','Identify points outside control limits or patterns','Investigate special cause variation'],
 benefits:['Distinguishes normal from abnormal variation','Prevents overreaction to common variation','Early warning system','Basis for Statistical Process Control (SPC)'],
-example:'A ward monitors monthly CAUTI rates on a control chart and detects a signal in March — investigation reveals a change in catheter type.',
-related:['SPC','Run Chart','Histogram','PDCA']},
+example:'A ward monitors monthly CAUTI rates on a control chart and detects a signal in March — investigation reveals a change in catheter type.',related:['SPC','Run Chart','Histogram','PDCA']},
 
 // ─── 2. IMPROVEMENT METHODOLOGIES ────────────────────────────
 {id:'pdca',name:'PDCA Cycle (Plan–Do–Check–Act)',icon:'🔄',cat:'Improvement Methodologies',type:'proactive',tags:['proactive'],stage:'Continuous Improvement',
@@ -837,8 +830,7 @@ purpose:'To continuously test, learn from, and embed changes in a controlled, ev
 when:'For any improvement project, from small process tweaks to large organizational changes.',
 steps:['PLAN: Identify the problem, set objectives, and plan the change','DO: Implement the change on a small scale or pilot','CHECK: Measure results against targets and analyze outcomes','ACT: If successful, standardize the change; if not, return to Plan'],
 benefits:['Systematic and structured','Reduces risk by piloting changes first','Builds in learning and adaptation','Universal applicability'],
-example:'A clinic plans to reduce appointment no-shows (Plan), sends reminder SMS for one month (Do), measures no-show rate (Check), and rolls out SMS system-wide (Act).',
-related:['PDSA','Kaizen','Lean','Six Sigma']},
+example:'A clinic plans to reduce appointment no-shows (Plan), sends reminder SMS for one month (Do), measures no-show rate (Check), and rolls out SMS system-wide (Act).',related:['PDSA','Kaizen','Lean','Six Sigma']},
 
 {id:'pdsa',name:'PDSA Cycle (Plan–Do–Study–Act)',icon:'🔬',cat:'Improvement Methodologies',type:'proactive',tags:['proactive'],stage:'Quality Improvement Projects',
 desc:'Similar to PDCA but emphasizes the Study phase — deeper learning and scientific analysis rather than simply checking results. Widely used in healthcare QI.',
@@ -846,8 +838,7 @@ purpose:'To test change ideas using rapid-cycle improvement, with emphasis on le
 when:'Common in healthcare improvement (IHI Model for Improvement), especially when multiple rapid tests of change are needed.',
 steps:['PLAN: Define the objective, predictions, and plan (Who/What/Where/When)','DO: Carry out the test, collect data, note observations','STUDY: Analyze results, compare to predictions, summarize learnings','ACT: Decide to adopt, adapt, or abandon the change'],
 benefits:['Emphasizes learning, not just results','Supports rapid-cycle testing','Aligns with IHI Model for Improvement','Builds evidence before full implementation'],
-example:'A hospital tests a new hand-off checklist on one ward for 2 weeks (PDSA cycle 1), studies what failed, revises, then tests again (cycle 2).',
-related:['PDCA','Kaizen','IHI Model for Improvement']},
+example:'A hospital tests a new hand-off checklist on one ward for 2 weeks (PDSA cycle 1), studies what failed, revises, then tests again (cycle 2).',related:['PDCA','Kaizen','IHI Model for Improvement']},
 
 {id:'kaizen',name:'Kaizen (Continuous Improvement)',icon:'⚡',cat:'Improvement Methodologies',type:'proactive',tags:['lean','proactive'],stage:'Continuous Improvement Culture',
 desc:'A Japanese philosophy meaning "change for the better." Involves all staff — from management to frontline workers — making small, continuous improvements every day.',
@@ -855,8 +846,7 @@ purpose:'To embed a culture of continuous improvement where everyone is empowere
 when:'As an ongoing organizational approach, not a one-time project. Especially effective in Lean environments.',
 steps:['Create a culture of psychological safety for raising problems','Encourage all staff to identify waste and inefficiency','Conduct regular Kaizen events (3–5 day focused improvement workshops)','Implement small changes immediately','Measure impact and standardize improvements','Celebrate successes and share learnings'],
 benefits:['Builds ownership and engagement','Sustainable long-term improvement','Low cost','Develops staff problem-solving skills'],
-example:'A nursing unit holds a 1-day Kaizen event and reduces supply restocking time by 40% by reorganizing the supply room layout.',
-related:['Lean','5S','Gemba Walk','PDCA']},
+example:'A nursing unit holds a 1-day Kaizen event and reduces supply restocking time by 40% by reorganizing the supply room layout.',related:['Lean','5S','Gemba Walk','PDCA']},
 
 {id:'lean',name:'Lean Methodology',icon:'🎯',cat:'Improvement Methodologies',type:'proactive',tags:['lean','proactive'],stage:'Operational Efficiency',
 desc:'A systematic approach to eliminating waste (Muda) from processes while delivering maximum value to the customer/patient. Originated in Toyota Production System.',
@@ -864,8 +854,7 @@ purpose:'To eliminate the 8 types of waste: Defects, Overproduction, Waiting, No
 when:'When analyzing any process for efficiency, waste, and value from the patient or customer perspective.',
 steps:['Define value from the patient perspective','Map the value stream (Value Stream Mapping)','Create flow — eliminate interruptions','Establish pull — produce only what is needed','Pursue perfection through continuous improvement'],
 benefits:['Reduces waste and cost','Improves patient/customer experience','Empowers frontline staff','Creates sustainable improvement systems'],
-example:'A pharmacy applies Lean principles to medication dispensing, reducing cycle time from 45 minutes to 12 minutes by eliminating unnecessary steps.',
-related:['5S','Kaizen','Value Stream Mapping','Kanban','Six Sigma']},
+example:'A pharmacy applies Lean principles to medication dispensing, reducing cycle time from 45 minutes to 12 minutes by eliminating unnecessary steps.',related:['5S','Kaizen','Value Stream Mapping','Kanban','Six Sigma']},
 
 {id:'six-sigma',name:'Six Sigma',icon:'σ',cat:'Improvement Methodologies',type:'proactive',tags:['proactive','statistical'],stage:'Advanced Quality Improvement',
 desc:'A data-driven methodology that aims to reduce process variation to achieve near-perfect quality — no more than 3.4 defects per million opportunities. Uses DMAIC structure.',
@@ -873,8 +862,7 @@ purpose:'To reduce defects and variation through rigorous statistical analysis a
 when:'For complex, data-rich problems where root causes are not obvious and significant variation exists.',
 steps:['Define the problem, scope, and goals','Measure current performance with data','Analyze data to identify root causes of variation','Improve the process by eliminating root causes','Control the improved process to sustain gains'],
 benefits:['Dramatic quality improvement','Data-driven, not opinion-based','Reduces costs significantly','Transferable across industries'],
-example:'A hospital uses Six Sigma to reduce surgical site infections from 4.2% to 0.9% by analyzing and controlling all process variables.',
-related:['DMAIC','Lean Six Sigma','SPC','FMEA']},
+example:'A hospital uses Six Sigma to reduce surgical site infections from 4.2% to 0.9% by analyzing and controlling all process variables.',related:['DMAIC','Lean Six Sigma','SPC','FMEA']},
 
 {id:'dmaic',name:'DMAIC',icon:'🔢',cat:'Improvement Methodologies',type:'proactive',tags:['proactive','statistical'],stage:'Process Optimization',
 desc:'The structured 5-phase Six Sigma improvement framework: Define, Measure, Analyze, Improve, Control. Used when improving an existing process.',
@@ -882,8 +870,7 @@ purpose:'To provide a disciplined, data-driven methodology for improving existin
 when:'For existing processes with measurable quality problems requiring statistical analysis.',
 steps:['DEFINE: Project charter, SIPOC, Voice of Customer','MEASURE: Baseline data, process capability (Cp, Cpk)','ANALYZE: Root cause analysis, regression, hypothesis testing','IMPROVE: Solution generation, piloting, implementation','CONTROL: Control charts, SOPs, response plan, hand-off'],
 benefits:['Rigorous and disciplined','Built-in verification at each gate','Aligns team around data','Proven track record globally'],
-example:'A DMAIC project reduces door-to-balloon time for STEMI patients from 95 minutes to 58 minutes over 8 months.',
-related:['Six Sigma','DMADV','FMEA','SPC','Control Chart']},
+example:'A DMAIC project reduces door-to-balloon time for STEMI patients from 95 minutes to 58 minutes over 8 months.',related:['Six Sigma','DMADV','FMEA','SPC','Control Chart']},
 
 {id:'dmadv',name:'DMADV (Design for Six Sigma)',icon:'🏗️',cat:'Improvement Methodologies',type:'proactive',tags:['proactive','statistical'],stage:'New Process Design',
 desc:'Six Sigma framework for designing new processes or products: Define, Measure, Analyze, Design, Verify. Used when a new process is needed rather than improving an existing one.',
@@ -891,8 +878,7 @@ purpose:'To design new processes or services that meet Six Sigma quality standar
 when:'When creating a new service, process, or product where no existing baseline exists.',
 steps:['DEFINE: Goals, customer requirements','MEASURE: Customer needs (CTQs), specifications','ANALYZE: Process options and benchmarks','DESIGN: Detailed process design','VERIFY: Pilot, test, and validate'],
 benefits:['Builds quality in from the start','Prevents future defects','Customer-centric design','Reduces costly redesign later'],
-example:'A hospital uses DMADV when launching a new telehealth service to ensure it meets patient and clinical requirements from day one.',
-related:['DMAIC','Six Sigma','SIPOC','FMEA']},
+example:'A hospital uses DMADV when launching a new telehealth service to ensure it meets patient and clinical requirements from day one.',related:['DMAIC','Six Sigma','SIPOC','FMEA']},
 
 {id:'lean-six',name:'Lean Six Sigma',icon:'⚙️',cat:'Improvement Methodologies',type:'proactive',tags:['lean','proactive','statistical'],stage:'Comprehensive Process Improvement',
 desc:'A combined methodology integrating Lean (waste elimination) with Six Sigma (variation reduction) to deliver comprehensive process improvement.',
@@ -900,8 +886,7 @@ purpose:'To simultaneously eliminate waste (Lean) and reduce variation (Six Sigm
 when:'For complex improvement projects needing both speed/efficiency improvement and defect reduction.',
 steps:['Apply Lean tools to eliminate obvious waste','Use Six Sigma DMAIC for complex root cause analysis','Combine Value Stream Mapping with statistical analysis','Implement improvements addressing both waste and variation','Sustain with Lean culture and Six Sigma controls'],
 benefits:['Best of both methodologies','Faster and more comprehensive improvement','Widely recognized framework','Transferable skills'],
-example:'A surgical unit applies Lean Six Sigma: Lean eliminates waiting, Six Sigma reduces surgical site infection variation — together achieving 60% improvement.',
-related:['Lean','Six Sigma','DMAIC','Value Stream Mapping']},
+example:'A surgical unit applies Lean Six Sigma: Lean eliminates waiting, Six Sigma reduces surgical site infection variation — together achieving 60% improvement.',related:['Lean','Six Sigma','DMAIC','Value Stream Mapping']},
 
 {id:'tqm',name:'TQM (Total Quality Management)',icon:'🏆',cat:'Improvement Methodologies',type:'proactive',tags:['proactive'],stage:'Organizational Quality Culture',
 desc:'An organization-wide management approach where every member participates in improving processes, products, services, and the culture in which they work.',
@@ -909,8 +894,7 @@ purpose:'To create a pervasive quality culture throughout an organization, not j
 when:'As a long-term strategic orientation for any organization committed to excellence.',
 steps:['Secure top leadership commitment','Define quality in terms of customer/patient needs','Train all staff in quality concepts','Empower staff to solve problems','Measure and report quality performance transparently','Continuously improve systems'],
 benefits:['Organization-wide quality culture','Long-term sustainable improvement','Improves patient/customer satisfaction','Reduces costs of poor quality'],
-example:'A hospital adopts TQM, training all 2,000 staff in quality concepts and forming department-level quality improvement teams.',
-related:['Kaizen','PDCA','Benchmarking','Balanced Scorecard']},
+example:'A hospital adopts TQM, training all 2,000 staff in quality concepts and forming department-level quality improvement teams.',related:['Kaizen','PDCA','Benchmarking','Balanced Scorecard']},
 
 {id:'cqi',name:'CQI (Continuous Quality Improvement)',icon:'📈',cat:'Improvement Methodologies',type:'proactive',tags:['proactive'],stage:'Ongoing Quality Enhancement',
 desc:'An ongoing organizational process of evaluating and improving performance systematically. In healthcare, CQI uses data to continuously assess care quality and patient outcomes.',
@@ -918,8 +902,7 @@ purpose:'To embed quality improvement as a permanent, ongoing organizational act
 when:'As a permanent operational framework, not just for specific problems.',
 steps:['Establish quality indicators and targets','Collect ongoing performance data','Report results to relevant teams','Identify gaps and improvement opportunities','Plan and implement changes','Re-measure and sustain'],
 benefits:['Embedded improvement culture','Data-informed decisions','Regulatory compliance support','Proactive rather than reactive quality management'],
-example:'A hospital CQI program tracks 20 quality indicators monthly, triggers improvement projects when indicators fall below threshold.',
-related:['PDCA','PDSA','KPI Dashboards','Balanced Scorecard']},
+example:'A hospital CQI program tracks 20 quality indicators monthly, triggers improvement projects when indicators fall below threshold.',related:['PDCA','PDSA','KPI Dashboards','Balanced Scorecard']},
 
 // ─── 3. RISK MANAGEMENT & PATIENT SAFETY ────────────────────
 {id:'fmea',name:'FMEA (Failure Mode and Effects Analysis)',icon:'⚠️',cat:'Risk Management & Patient Safety',type:'proactive',tags:['safety','proactive'],stage:'Risk Assessment Before Errors Occur',
@@ -928,8 +911,7 @@ purpose:'To predict and prevent failures before they happen by systematically an
 when:'When designing a new process, after a near-miss, or when reviewing high-risk processes.',
 steps:['Define the process or system to analyze','List all process steps','For each step, identify all potential failure modes','Determine the effects of each failure','Rate Severity (1–10), Occurrence (1–10), Detectability (1–10)','Calculate RPN (S × O × D)','Prioritize high-RPN items','Develop and implement action plans','Recalculate RPN after improvements'],
 benefits:['Prevents failures proactively','Prioritizes risk reduction efforts','Systematic and comprehensive','Team-based and collaborative'],
-example:'A pharmacy performs FMEA on the IV medication preparation process and identifies high-risk failure modes: look-alike/sound-alike drugs and calculation errors.',
-related:['HFMEA','Risk Matrix','Bow-Tie Analysis','CAPA','RCA']},
+example:'A pharmacy performs FMEA on the IV medication preparation process and identifies high-risk failure modes: look-alike/sound-alike drugs and calculation errors.',related:['HFMEA','Risk Matrix','Bow-Tie Analysis','CAPA','RCA']},
 
 {id:'hfmea',name:'HFMEA (Healthcare Failure Mode & Effects Analysis)',icon:'🏥',cat:'Risk Management & Patient Safety',type:'proactive',tags:['safety','proactive'],stage:'Healthcare Risk Assessment',
 desc:'An adaptation of FMEA specifically designed for healthcare settings, developed by the VA National Center for Patient Safety. Uses a hazard scoring matrix and decision tree.',
@@ -937,8 +919,7 @@ purpose:'To proactively evaluate healthcare processes for patient safety risks b
 when:'Required by many healthcare accreditation bodies for high-risk processes like medication administration, surgical procedures, and blood transfusion.',
 steps:['Select the high-risk process','Assemble an interdisciplinary team','Define the process using flow diagrams','Conduct a hazard analysis for each process step','Rate hazard score (Severity × Probability)','Use HFMEA decision tree to determine action','Implement controls and verify effectiveness'],
 benefits:['Healthcare-specific design','Incorporates human factors','Required for accreditation','Team-based approach'],
-example:'A hospital uses HFMEA to analyze its blood transfusion process and identifies 3 critical failure points requiring immediate control measures.',
-related:['FMEA','Risk Matrix','Patient Safety','RCA']},
+example:'A hospital uses HFMEA to analyze its blood transfusion process and identifies 3 critical failure points requiring immediate control measures.',related:['FMEA','Risk Matrix','Patient Safety','RCA']},
 
 {id:'rca',name:'RCA (Root Cause Analysis)',icon:'🔍',cat:'Risk Management & Patient Safety',type:'reactive',tags:['reactive','safety'],stage:'After Adverse Events',
 desc:'A structured reactive methodology to investigate the underlying causes of an incident, near-miss, or adverse event. Goes beyond surface causes to identify systemic and latent root causes.',
@@ -946,8 +927,7 @@ purpose:'To understand WHY an event occurred and implement solutions that preven
 when:'After any significant incident, near-miss, sentinel event, or pattern of similar events.',
 steps:['Assemble the RCA team (interdisciplinary)','Gather facts and evidence (timeline, interviews, records)','Map the incident timeline','Identify contributing factors','Ask "Why?" repeatedly (5 Whys)','Use Fishbone Diagram to organize causes','Identify true root causes','Develop specific, measurable action plans (CAPA)','Monitor implementation and effectiveness'],
 benefits:['Identifies systemic causes, not just individual blame','Prevents recurrence','Builds organizational learning','Regulatory and accreditation requirement'],
-example:'After a patient fall, RCA reveals root causes: no fall risk reassessment policy after medication change, and inadequate staff training on fall prevention.',
-related:['5 Whys','Ishikawa Diagram','CAPA','Sentinel Event Review','Incident Reporting']},
+example:'After a patient fall, RCA reveals root causes: no fall risk reassessment policy after medication change, and inadequate staff training on fall prevention.',related:['5 Whys','Ishikawa Diagram','CAPA','Sentinel Event Review','Incident Reporting']},
 
 {id:'5whys',name:'5 Whys Analysis',icon:'❓',cat:'Risk Management & Patient Safety',type:'reactive',tags:['reactive'],stage:'Simple Root Cause Investigation',
 desc:'A simple but powerful iterative questioning technique — asking "Why?" five or more times to drill down from a surface symptom to the underlying root cause of a problem.',
@@ -955,8 +935,7 @@ purpose:'To identify the root cause of a problem by repeatedly questioning the c
 when:'For relatively straightforward problems where the root cause is not immediately obvious. Used within RCA.',
 steps:['Define the problem clearly and specifically','Ask "Why did this happen?" — write the answer','Ask "Why did that happen?" — write the answer','Repeat 5 or more times until you reach a root cause (usually a process or system issue)','Verify the root cause by working back through the chain','Develop and implement corrective actions'],
 benefits:['Simple — no statistical knowledge needed','Fast — 30–60 minutes','Encourages systems thinking','Effective for straightforward problems'],
-example:'Problem: Patient received wrong medication. Why? Nurse picked wrong vial. Why? Similar packaging. Why? No LASA drug separation policy. Why? Policy never created. Why? No periodic medication safety review process. Root Cause: Absence of periodic medication safety review.'],
-related:['RCA','Ishikawa Diagram','CAPA']},
+example:'Problem: Patient received wrong medication. Why? Nurse picked wrong vial. Why? Similar packaging. Why? No LASA drug separation policy. Why? Policy never created. Why? No periodic medication safety review process. Root Cause: Absence of periodic medication safety review.',related:['RCA','Ishikawa Diagram','CAPA']},
 
 {id:'capa',name:'CAPA (Corrective and Preventive Action)',icon:'🔧',cat:'Risk Management & Patient Safety',type:'reactive',tags:['reactive'],stage:'Post-Investigation Improvement',
 desc:'A systematic process for investigating the cause of a nonconformity and implementing actions to correct the problem (Corrective) and prevent future recurrence (Preventive).',
@@ -964,8 +943,7 @@ purpose:'To ensure that identified problems are permanently resolved and similar
 when:'After any audit finding, incident investigation, complaint, or quality problem is identified.',
 steps:['Identify and document the nonconformity or problem','Analyze root cause (using RCA, 5 Whys, Fishbone)','Define corrective actions (fix the immediate problem)','Define preventive actions (prevent recurrence)','Assign responsibilities and timelines','Implement and document actions','Verify effectiveness of actions','Close out and document lessons learned'],
 benefits:['Closes the quality loop','Prevents recurrence of problems','Regulatory requirement (ISO, JCI, etc.)','Creates accountability'],
-example:'After RCA of a medication error, CAPA includes: (Corrective) counseling staff, (Preventive) creating LASA drug policy and annual training requirement.',
-related:['RCA','5 Whys','Incident Reporting','Internal Audit']},
+example:'After RCA of a medication error, CAPA includes: (Corrective) counseling staff, (Preventive) creating LASA drug policy and annual training requirement.',related:['RCA','5 Whys','Incident Reporting','Internal Audit']},
 
 {id:'bow-tie',name:'Bow-Tie Analysis',icon:'🎀',cat:'Risk Management & Patient Safety',type:'proactive',tags:['safety','proactive'],stage:'Risk Pathway Analysis',
 desc:'A visual risk analysis method shaped like a bow-tie: the hazard is the central knot; threat barriers on the left prevent the event; consequence barriers on the right limit harm after the event.',
@@ -973,8 +951,7 @@ purpose:'To provide a comprehensive visual overview of all pathways leading to a
 when:'For high-risk processes where both prevention and mitigation controls need to be visualized together.',
 steps:['Identify the top event (the hazard)','List all threats/causes on the left side','Identify prevention barriers (proactive controls)','List all consequences on the right side','Identify mitigation barriers (reactive controls)','Identify escalation factors that could defeat barriers','Assign ownership to each barrier'],
 benefits:['Visual and intuitive','Shows both prevention and mitigation','Facilitates communication to leadership','Identifies barrier gaps'],
-example:'A bow-tie analysis for central line insertion shows barriers preventing bloodstream infection and escalation factors that could defeat those barriers.'],
-related:['FMEA','Risk Matrix','RCA']},
+example:'A bow-tie analysis for central line insertion shows barriers preventing bloodstream infection and escalation factors that could defeat those barriers.',related:['FMEA','Risk Matrix','RCA']},
 
 {id:'risk-matrix',name:'Risk Assessment Matrix',icon:'🟧',cat:'Risk Management & Patient Safety',type:'proactive',tags:['safety','proactive'],stage:'Risk Prioritization',
 desc:'A grid that plots risks according to their probability of occurrence (likelihood) and severity of impact, producing a color-coded risk level (low, medium, high, critical) for each risk.',
@@ -982,8 +959,7 @@ purpose:'To prioritize risks requiring immediate action versus those that can be
 when:'During risk assessments, FMEA, new project planning, or accreditation preparation.',
 steps:['Identify all potential risks','Rate each risk for Likelihood (1–5)','Rate each risk for Impact/Severity (1–5)','Plot each risk on the matrix','Color-code: Low (green), Medium (yellow), High (orange), Critical (red)','Develop risk response plans for high and critical risks','Review and update the matrix regularly'],
 benefits:['Visual and easy to communicate','Prioritizes risk response','Supports resource allocation','Required by many accreditation standards'],
-example:'A hospital rates 30 identified risks on a matrix; 5 fall in the critical zone (high likelihood + high impact) and receive immediate action plans.'],
-related:['FMEA','HFMEA','Bow-Tie Analysis','Risk Register']},
+example:'A hospital rates 30 identified risks on a matrix; 5 fall in the critical zone (high likelihood + high impact) and receive immediate action plans.',related:['FMEA','HFMEA','Bow-Tie Analysis','Risk Register']},
 
 {id:'sentinel',name:'Sentinel Event Review',icon:'🚨',cat:'Risk Management & Patient Safety',type:'reactive',tags:['reactive','safety'],stage:'Serious Event Investigation',
 desc:'A thorough investigation of a serious, unexpected occurrence that results in death, serious physical or psychological injury, or the risk thereof. Mandated by accreditation bodies (JCI, JCIA).',
@@ -991,8 +967,7 @@ purpose:'To understand all contributing factors to a serious patient safety even
 when:'Whenever a sentinel event occurs — wrong-site surgery, suicide, unintended retention of foreign body, infant abduction, transfusion-related death, etc.',
 steps:['Immediately report and secure evidence','Assemble interdisciplinary team within 24 hours','Conduct thorough root cause analysis','Review all contributing factors (system, process, human)','Develop comprehensive improvement plan','Implement actions with accountability','Report to relevant authorities (accreditation body, ministry)','Monitor effectiveness of improvements'],
 benefits:['Promotes organizational learning from serious events','Required for accreditation','Drives systemic change','Demonstrates commitment to patient safety'],
-example:'A wrong-site surgery triggers a sentinel event review; findings lead to mandatory Time-Out protocol and surgical site marking policy.',
-related:['RCA','CAPA','Incident Reporting','FMEA']},
+example:'A wrong-site surgery triggers a sentinel event review; findings lead to mandatory Time-Out protocol and surgical site marking policy.',related:['RCA','CAPA','Incident Reporting','FMEA']},
 
 {id:'near-miss',name:'Near Miss Analysis',icon:'⚡',cat:'Risk Management & Patient Safety',type:'reactive',tags:['reactive','safety'],stage:'Learning from Near Misses',
 desc:'Systematic analysis of events that almost caused harm but did not, due to chance or timely intervention. Near misses are rich learning opportunities that are 300× more frequent than actual adverse events (Heinrich Triangle).',
@@ -1000,8 +975,7 @@ purpose:'To learn from events that "almost happened" before an actual harm occur
 when:'Whenever a near miss is reported — especially for high-risk processes like medication administration, surgery, and transfusion.',
 steps:['Encourage and normalize near-miss reporting','Collect near-miss reports systematically','Analyze patterns across reports','Identify common root causes','Implement preventive actions','Feed back to reporters to encourage future reporting'],
 benefits:['Learning without actual harm','Early warning signal','Builds reporting culture','Low-cost compared to adverse event management'],
-example:'10 near-miss reports of look-alike drug selection are analyzed; a new color-coded storage system is implemented before an actual error occurs.'],
-related:['Incident Reporting','RCA','FMEA','CAPA']},
+example:'10 near-miss reports of look-alike drug selection are analyzed; a new color-coded storage system is implemented before an actual error occurs.',related:['Incident Reporting','RCA','FMEA','CAPA']},
 
 // ─── 4. STATISTICAL & MEASUREMENT TOOLS ──────────────────────
 {id:'spc',name:'SPC (Statistical Process Control)',icon:'📊',cat:'Statistical & Measurement Tools',type:'proactive',tags:['statistical','proactive'],stage:'Process Monitoring',
@@ -1010,8 +984,7 @@ purpose:'To maintain process performance within acceptable limits and detect cha
 when:'For any ongoing process producing measurable output, especially in high-volume healthcare or manufacturing settings.',
 steps:['Select the process and quality characteristic to monitor','Collect baseline data and calculate control limits','Plot data on control chart over time','Apply Nelson/Western Electric rules to detect special cause','Investigate and eliminate special cause variation','Recalculate limits when process changes'],
 benefits:['Scientifically distinguishes signal from noise','Prevents unnecessary tampering','Early detection of problems','Foundation of quality control'],
-example:'A hospital uses SPC control charts to monitor monthly hand hygiene compliance; a sudden drop below LCL triggers investigation in November.'],
-related:['Control Chart','Run Chart','Six Sigma','PDCA']},
+example:'A hospital uses SPC control charts to monitor monthly hand hygiene compliance; a sudden drop below LCL triggers investigation in November.',related:['Control Chart','Run Chart','Six Sigma','PDCA']},
 
 {id:'run-chart',name:'Run Chart',icon:'📉',cat:'Statistical & Measurement Tools',type:'proactive',tags:['statistical','proactive'],stage:'Trend Monitoring',
 desc:'A simple time-series graph plotting data points over time against a median line. Simpler than a control chart but powerful for detecting trends and shifts.',
@@ -1019,8 +992,7 @@ purpose:'To visually detect trends, shifts, and cycles in process data over time
 when:'During early stages of a QI project to understand baseline performance, or when full SPC analysis is not practical.',
 steps:['Define the measure','Collect data over time','Calculate the median','Plot data points with the median line','Apply run chart rules (shifts, trends, runs, astronomical points)','Interpret patterns'],
 benefits:['Simple and quick to create','No complex statistics needed','Identifies trends before they become problems','Useful for QI project tracking'],
-example:'A team tracks monthly hospital-acquired pressure injuries on a run chart and identifies a downward trend following bundle implementation.'],
-related:['Control Chart','SPC','Histogram']},
+example:'A team tracks monthly hospital-acquired pressure injuries on a run chart and identifies a downward trend following bundle implementation.',related:['Control Chart','SPC','Histogram']},
 
 {id:'benchmarking',name:'Benchmarking',icon:'🏅',cat:'Statistical & Measurement Tools',type:'proactive',tags:['proactive'],stage:'Strategic Improvement',
 desc:'The practice of comparing an organization\'s performance, processes, and practices against the best-performing organizations (internal, competitive, or best-in-class benchmarks) to identify gaps and improvement targets.',
@@ -1028,8 +1000,7 @@ purpose:'To set aspirational but achievable performance targets based on what th
 when:'During strategic planning, accreditation preparation, or when setting KPI targets.',
 steps:['Identify what to benchmark (process, outcome, or practice)','Select benchmark partners (internal, industry, best-in-class)','Collect comparative data','Analyze gaps between current and benchmark performance','Identify best practices enabling benchmark performance','Adapt and implement best practices','Monitor improvement toward benchmark'],
 benefits:['Sets realistic excellence targets','Identifies best practices','Motivates improvement','Supports accreditation'],
-example:'A hospital benchmarks its surgical site infection rate against JCI-accredited hospitals globally, identifying a 2× gap and targeting best-practice bundle implementation.'],
-related:['KPI Dashboards','Balanced Scorecard','Gap Analysis']},
+example:'A hospital benchmarks its surgical site infection rate against JCI-accredited hospitals globally, identifying a 2× gap and targeting best-practice bundle implementation.',related:['KPI Dashboards','Balanced Scorecard','Gap Analysis']},
 
 {id:'time-motion',name:'Time and Motion Study',icon:'⏱️',cat:'Statistical & Measurement Tools',type:'proactive',tags:['statistical','proactive','lean'],stage:'Efficiency Analysis',
 desc:'A work measurement technique that records the time taken for each activity in a process to identify inefficiencies, wasted time, and opportunities for improvement.',
@@ -1037,8 +1008,7 @@ purpose:'To quantify how time is spent in a process and identify value-added vs.
 when:'When analyzing clinical workflows, staffing requirements, or operational efficiency.',
 steps:['Define the process to study','Identify all activities within the process','Train an observer','Observe and time each activity using a structured recording sheet','Categorize activities (value-added, necessary non-value-added, waste)','Analyze data to identify waste','Design an improved workflow'],
 benefits:['Quantifies inefficiency objectively','Evidence base for staffing decisions','Identifies waste for Lean improvement','Staff involvement improves buy-in'],
-example:'A time and motion study in a pharmacy reveals nurses spend 23% of shift time on medication administration tasks that could be streamlined.'],
-related:['Lean','Spaghetti Diagram','Work Sampling','Value Stream Mapping']},
+example:'A time and motion study in a pharmacy reveals nurses spend 23% of shift time on medication administration tasks that could be streamlined.',related:['Lean','Spaghetti Diagram','Work Sampling','Value Stream Mapping']},
 
 {id:'work-sampling',name:'Work Sampling',icon:'📋',cat:'Statistical & Measurement Tools',type:'proactive',tags:['statistical','proactive'],stage:'Staff Utilization Analysis',
 desc:'A statistical sampling technique that measures how staff time is distributed across different activities through random observations, rather than continuous monitoring.',
@@ -1046,8 +1016,7 @@ purpose:'To understand staff time utilization without continuous observation —
 when:'When analyzing nursing workload, physician time allocation, or support staff productivity.',
 steps:['Define the activities to be sampled','Determine sample size (based on desired statistical confidence)','Create random observation schedule','Train observers','Conduct observations at random intervals','Record activity at time of observation','Analyze frequency of each activity'],
 benefits:['Statistically valid with smaller observation time','Less intrusive than continuous monitoring','Useful for staffing analysis','Identifies activity patterns'],
-example:'Work sampling over 2 weeks shows nurses spend 18% of time on documentation — hospital invests in bedside terminals to reduce this.'],
-related:['Time and Motion Study','Lean','Process Mapping']},
+example:'Work sampling over 2 weeks shows nurses spend 18% of time on documentation — hospital invests in bedside terminals to reduce this.',related:['Time and Motion Study','Lean','Process Mapping']},
 
 {id:'regression',name:'Regression Analysis',icon:'📐',cat:'Statistical & Measurement Tools',type:'proactive',tags:['statistical','proactive'],stage:'Predictive Analysis',
 desc:'A statistical method for modeling the relationship between a dependent variable and one or more independent variables. Used to predict outcomes and understand cause-effect relationships.',
@@ -1055,8 +1024,7 @@ purpose:'To quantify relationships between variables and build predictive models
 when:'In advanced QI projects requiring prediction or understanding of complex multi-variable relationships.',
 steps:['Define the outcome variable (y) and predictor variables (x)','Collect sufficient paired data','Check data assumptions (normality, linearity, independence)','Run regression analysis (simple or multiple)','Interpret coefficients and R-squared value','Validate the model','Use for prediction and decision-making'],
 benefits:['Quantifies relationships precisely','Enables prediction','Controls for confounding variables','Evidence base for decisions'],
-example:'Regression analysis shows that ward staffing ratio is the strongest predictor of patient fall rates, controlling for patient acuity.'],
-related:['Scatter Diagram','SPC','Six Sigma']},
+example:'Regression analysis shows that ward staffing ratio is the strongest predictor of patient fall rates, controlling for patient acuity.',related:['Scatter Diagram','SPC','Six Sigma']},
 
 // ─── 5. PROCESS ANALYSIS TOOLS ───────────────────────────────
 {id:'vsm',name:'Value Stream Mapping (VSM)',icon:'🗺️',cat:'Process Analysis Tools',type:'proactive',tags:['lean','proactive'],stage:'Process Optimization',
@@ -1065,8 +1033,7 @@ purpose:'To see the entire value delivery process at a glance, identify waste, a
 when:'As the first step in a Lean improvement project or when redesigning a major care pathway.',
 steps:['Define the product family or patient population','Map the current state (all steps, times, and information flows)','Identify waste (delays, redundancy, unnecessary motion)','Calculate total lead time and value-added time','Design the ideal future state','Create an implementation plan to reach the future state'],
 benefits:['Systemic view of entire process','Identifies all types of waste','Quantifies improvement opportunity','Aligns team on current vs. desired state'],
-example:'VSM of the emergency department reveals 68 minutes of the 4-hour patient journey are value-added; the rest is waste (waiting, transport, redundant documentation).'],
-related:['Lean','Process Mapping','Spaghetti Diagram','Swimlane Diagram']},
+example:'VSM of the emergency department reveals 68 minutes of the 4-hour patient journey are value-added; the rest is waste (waiting, transport, redundant documentation).',related:['Lean','Process Mapping','Spaghetti Diagram','Swimlane Diagram']},
 
 {id:'swimlane',name:'Swimlane Diagram',icon:'🏊',cat:'Process Analysis Tools',type:'proactive',tags:['proactive'],stage:'Role-Based Process Analysis',
 desc:'A flowchart that organizes process steps into parallel horizontal or vertical lanes, each representing a different person, team, or department responsible for those steps.',
@@ -1074,8 +1041,7 @@ purpose:'To clearly show who does what and where handoffs occur in a process —
 when:'When analyzing processes involving multiple departments or roles, or when handoff failures are suspected.',
 steps:['Identify all roles or departments involved','Draw horizontal lanes for each role','Map all process steps into the appropriate lane','Draw handoff arrows between lanes','Identify bottlenecks at handoffs','Redesign to reduce handoff failures'],
 benefits:['Clarifies accountability','Makes handoff problems visible','Useful for cross-departmental processes','Simple to understand'],
-example:'A swimlane diagram of patient admission reveals 7 handoffs between ER, bed management, ward nurse, and doctor — each handoff is a potential failure point.'],
-related:['Flowchart','Value Stream Mapping','SIPOC','RACI Matrix']},
+example:'A swimlane diagram of patient admission reveals 7 handoffs between ER, bed management, ward nurse, and doctor — each handoff is a potential failure point.',related:['Flowchart','Value Stream Mapping','SIPOC','RACI Matrix']},
 
 {id:'sipoc',name:'SIPOC',icon:'🔗',cat:'Process Analysis Tools',type:'proactive',tags:['proactive'],stage:'Process Definition',
 desc:'A high-level process mapping tool that defines: Suppliers → Inputs → Process → Outputs → Customers. Provides a structured overview before detailed process analysis.',
@@ -1083,8 +1049,7 @@ purpose:'To define the boundaries and key elements of a process at the beginning
 when:'At the start of any improvement project (especially Six Sigma/DMAIC) to scope the process and align the team.',
 steps:['Start with the Process (5–7 high-level steps)','Identify the Outputs of the process','Identify the Customers who receive outputs','Identify the Inputs required','Identify the Suppliers of those inputs','Review with stakeholders to validate scope'],
 benefits:['Quick process overview','Aligns team on scope','Identifies key customers and suppliers','Foundation for detailed mapping'],
-example:'SIPOC for the medication dispensing process: Supplier=Pharmacy; Input=Prescription; Process=Verify, prepare, label, dispense; Output=Medication; Customer=Nurse/Patient.'],
-related:['Flowchart','Value Stream Mapping','DMAIC']},
+example:'SIPOC for the medication dispensing process: Supplier=Pharmacy; Input=Prescription; Process=Verify, prepare, label, dispense; Output=Medication; Customer=Nurse/Patient.',related:['Flowchart','Value Stream Mapping','DMAIC']},
 
 {id:'gemba',name:'Gemba Walk',icon:'👟',cat:'Process Analysis Tools',type:'proactive',tags:['lean','proactive'],stage:'Workplace Observation',
 desc:'A Lean practice where managers and improvement teams go to the actual workplace (Gemba = "the real place" in Japanese) to observe processes, talk to staff, and identify improvement opportunities firsthand.',
@@ -1092,8 +1057,7 @@ purpose:'To understand real work as it is actually performed — not as describe
 when:'Regularly as part of a Lean culture, or when investigating process problems.',
 steps:['Select the process or area to observe','Go to the actual workplace (ward, lab, pharmacy)','Observe silently — do not interrupt unless safety is at risk','Ask open questions of staff: "Can you walk me through what you do?"','Document observations and questions','Bring findings back to improvement discussions'],
 benefits:['Reveals reality vs. documentation','Builds respect for frontline staff','Identifies waste and problems not captured in reports','Strengthens management-staff relationships'],
-example:'During a Gemba walk in the ICU, a quality manager observes nurses interrupting medication preparation to answer phone calls — a risk identified and addressed.'],
-related:['Lean','Kaizen','5S','Value Stream Mapping']},
+example:'During a Gemba walk in the ICU, a quality manager observes nurses interrupting medication preparation to answer phone calls — a risk identified and addressed.',related:['Lean','Kaizen','5S','Value Stream Mapping']},
 
 {id:'spaghetti',name:'Spaghetti Diagram',icon:'🍝',cat:'Process Analysis Tools',type:'proactive',tags:['lean','proactive'],stage:'Movement Analysis',
 desc:'A diagram that traces the physical movement of a person, patient, or item through a space on a floor plan, creating a "spaghetti-like" pattern that reveals excessive motion and inefficient layout.',
@@ -1101,8 +1065,7 @@ purpose:'To quantify and visualize unnecessary movement (a Lean waste) and guide
 when:'When analyzing clinical workflows with high physical movement, e.g., nursing stations, pharmacy, labs.',
 steps:['Obtain a floor plan of the workspace','Observe and trace every movement of a person or item','Draw lines on the floor plan for each movement','Calculate total distance traveled','Identify excessive back-tracking and unnecessary movement','Redesign layout to minimize travel'],
 benefits:['Makes motion waste visible','Simple and compelling visual','Guides workspace redesign','Quantifies improvement opportunity'],
-example:'A spaghetti diagram shows a nurse walks 4.2 km per shift; after supply room relocation, this drops to 2.1 km — saving 45 min/shift.'],
-related:['Lean','Value Stream Mapping','Time and Motion Study','5S']},
+example:'A spaghetti diagram shows a nurse walks 4.2 km per shift; after supply room relocation, this drops to 2.1 km — saving 45 min/shift.',related:['Lean','Value Stream Mapping','Time and Motion Study','5S']},
 
 // ─── 6. LEAN TOOLS ────────────────────────────────────────────
 {id:'5s',name:'5S Workplace Organization',icon:'🧹',cat:'Lean Tools',type:'proactive',tags:['lean','proactive'],stage:'Workplace Organization & Safety',
@@ -1111,8 +1074,7 @@ purpose:'To create a clean, organized, safe, and efficient workplace that suppor
 when:'As a foundation for any Lean program, or when workspaces are disorganized, cluttered, or unsafe.',
 steps:['SORT (Seiri): Remove all unnecessary items from the workspace','SET IN ORDER (Seiton): Organize remaining items for efficiency — "a place for everything and everything in its place"','SHINE (Seiso): Clean the area and identify sources of contamination or dirt','STANDARDIZE (Seiketsu): Create visual standards and regular routines to maintain first 3 Ss','SUSTAIN (Shitsuke): Develop habits, training, and accountability to maintain standards','Add SAFETY as 6S for healthcare environments'],
 benefits:['Improves safety and reduces accidents','Reduces time searching for items','Improves staff morale','Foundation for Lean'],
-example:'A 5S event in the emergency department medication room reduces time to locate medications from 3 minutes to 30 seconds.'],
-related:['Lean','Kaizen','Gemba Walk','Poka-Yoke']},
+example:'A 5S event in the emergency department medication room reduces time to locate medications from 3 minutes to 30 seconds.',related:['Lean','Kaizen','Gemba Walk','Poka-Yoke']},
 
 {id:'kanban',name:'Kanban',icon:'📌',cat:'Lean Tools',type:'proactive',tags:['lean','proactive'],stage:'Workflow Management',
 desc:'A visual workflow management system using cards or boards to signal the need for work, supplies, or resources. Implements pull-based production — work is only started when there is demand.',
@@ -1120,8 +1082,7 @@ purpose:'To control work-in-progress, prevent overproduction and overload, and m
 when:'For managing clinical workflows, supply replenishment, task management, or patient flow.',
 steps:['Define workflow stages (columns on Kanban board)','Create cards for each task/item','Set work-in-progress (WIP) limits for each column','Move cards through stages as work progresses','Replenish only when a card signals need','Monitor flow and bottlenecks','Continuously improve the system'],
 benefits:['Visual and intuitive','Reduces waste from overproduction and waiting','Limits multitasking and overload','Flexible and easy to implement'],
-example:'A ward uses a Kanban board for daily tasks: To Do / In Progress / Done — nurses see workload at a glance and WIP limits prevent overload.'],
-related:['Lean','JIT','Value Stream Mapping','Heijunka']},
+example:'A ward uses a Kanban board for daily tasks: To Do / In Progress / Done — nurses see workload at a glance and WIP limits prevent overload.',related:['Lean','JIT','Value Stream Mapping','Heijunka']},
 
 {id:'jit',name:'JIT (Just-In-Time)',icon:'⏰',cat:'Lean Tools',type:'proactive',tags:['lean','proactive'],stage:'Inventory & Supply Management',
 desc:'A Lean production strategy of delivering the right items in the right quantity at the right time — eliminating excess inventory, storage waste, and obsolete supplies.',
@@ -1129,8 +1090,7 @@ purpose:'To reduce inventory waste and ensure supplies are available exactly whe
 when:'In pharmacy, supply chain, and clinical departments managing medical supplies and consumables.',
 steps:['Analyze demand patterns for each supply item','Calculate consumption rates and replenishment lead times','Set reorder points based on safety stock + lead time demand','Implement visual triggers (Kanban cards, min/max labels)','Build reliable supplier relationships','Monitor and adjust as patterns change'],
 benefits:['Reduces waste from excess inventory','Frees capital tied up in stock','Reduces expired stock','Improves supply chain efficiency'],
-example:'A hospital implements JIT for surgical supplies, reducing supply room inventory from 60-day to 7-day stock — freeing significant storage space and capital.'],
-related:['Kanban','Lean','5S','Heijunka']},
+example:'A hospital implements JIT for surgical supplies, reducing supply room inventory from 60-day to 7-day stock — freeing significant storage space and capital.',related:['Kanban','Lean','5S','Heijunka']},
 
 {id:'poka-yoke',name:'Poka-Yoke (Mistake-Proofing)',icon:'🔒',cat:'Lean Tools',type:'proactive',tags:['lean','proactive','safety'],stage:'Error Prevention',
 desc:'A Lean technique that designs processes or equipment to prevent errors from occurring or to make errors immediately obvious before they cause harm. Poka-Yoke = "mistake-proofing" in Japanese.',
@@ -1138,8 +1098,7 @@ purpose:'To design errors out of processes entirely, rather than relying on huma
 when:'When a process has recurring errors due to human factors, especially for high-stakes steps in medication, surgery, or laboratory.',
 steps:['Identify recurring error types and locations','Understand why the error occurs (human factors)','Design a physical, visual, or procedural barrier that prevents the error or makes it immediately detectable','Test the poka-yoke solution','Implement and standardize','Monitor for error elimination'],
 benefits:['Most effective error prevention','Does not rely on human memory or attention','One-time design cost, ongoing benefit','Patient safety standard'],
-example:'IV tubing connectors are redesigned so enteral and IV tubes physically cannot connect — preventing accidental enteral feeding through IV route.'],
-related:['Lean','FMEA','5S','Patient Safety']},
+example:'IV tubing connectors are redesigned so enteral and IV tubes physically cannot connect — preventing accidental enteral feeding through IV route.',related:['Lean','FMEA','5S','Patient Safety']},
 
 {id:'andon',name:'Andon (Visual Alert System)',icon:'🚦',cat:'Lean Tools',type:'proactive',tags:['lean','proactive'],stage:'Real-Time Problem Signaling',
 desc:'A Lean visual management system that allows workers to signal problems, stop production/work, and request help immediately. Named after the Japanese term for "lamp."',
@@ -1147,8 +1106,7 @@ purpose:'To make problems visible in real time and empower any worker to stop an
 when:'In high-volume, time-sensitive clinical and operational settings.',
 steps:['Define the types of problems that trigger an Andon signal','Install visual and/or audio alert systems','Train staff on when and how to trigger Andon','Define response protocols for each alert type','Measure response times and resolution','Use aggregate Andon data for improvement'],
 benefits:['Empowers staff to stop and fix problems','Makes problems visible immediately','Prevents defects from passing downstream','Supports a culture of quality'],
-example:'A hospital\'s Andon system uses colored indicator lights outside patient rooms: white = nurse call, yellow = assistance needed, red = emergency — visible from the nursing station.'],
-related:['Lean','Poka-Yoke','Gemba Walk','Kanban']},
+example:'A hospital\'s Andon system uses colored indicator lights outside patient rooms: white = nurse call, yellow = assistance needed, red = emergency — visible from the nursing station.',related:['Lean','Poka-Yoke','Gemba Walk','Kanban']},
 
 {id:'heijunka',name:'Heijunka (Workload Leveling)',icon:'⚖️',cat:'Lean Tools',type:'proactive',tags:['lean','proactive'],stage:'Workload Balancing',
 desc:'A Lean production scheduling technique that levels the volume and variety of work over a period to avoid peaks and valleys in demand and workload.',
@@ -1156,8 +1114,7 @@ purpose:'To create a smooth, predictable workflow by distributing work evenly ov
 when:'In clinical scheduling, lab testing, pharmacy dispensing, or any setting with variable demand.',
 steps:['Analyze demand patterns (volume and variety by hour/day/week)','Calculate takt time (available time ÷ demand)','Create a leveled schedule distributing demand evenly','Align staffing and resources to leveled schedule','Monitor and adjust as patterns change'],
 benefits:['Reduces overburden on staff','Smooths patient flow','Improves resource utilization','Reduces waiting'],
-example:'An ED applies Heijunka to schedule non-emergency patient appointments throughout the day, preventing morning surge and afternoon quiet periods.'],
-related:['Lean','JIT','Kanban','Value Stream Mapping']},
+example:'An ED applies Heijunka to schedule non-emergency patient appointments throughout the day, preventing morning surge and afternoon quiet periods.',related:['Lean','JIT','Kanban','Value Stream Mapping']},
 
 // ─── 7. AUDIT & COMPLIANCE TOOLS ──────────────────────────────
 {id:'internal-audit',name:'Internal Audit',icon:'📝',cat:'Audit & Compliance Tools',type:'proactive',tags:['proactive'],stage:'Compliance Verification',
@@ -1166,8 +1123,7 @@ purpose:'To verify compliance with internal and external standards, identify gap
 when:'Regularly scheduled (e.g., monthly, quarterly, annually) for all quality-relevant processes.',
 steps:['Plan the audit (scope, standards, criteria, team)','Prepare audit checklist','Conduct the audit (observations, interviews, document review)','Document findings (conformities and nonconformities)','Score and classify findings (critical, major, minor, observation)','Report results to relevant management','Issue corrective action requests for nonconformities','Follow up on CAPA implementation'],
 benefits:['Identifies gaps before external audits','Ensures standards compliance','Drives continuous improvement','Regulatory and accreditation requirement'],
-example:'A monthly infection control audit identifies that hand hygiene products in 3 rooms are expired — CAPA issued and resolved within 48 hours.'],
-related:['Clinical Audit','CAPA','Gap Analysis','Checklist']},
+example:'A monthly infection control audit identifies that hand hygiene products in 3 rooms are expired — CAPA issued and resolved within 48 hours.',related:['Clinical Audit','CAPA','Gap Analysis','Checklist']},
 
 {id:'clinical-audit',name:'Clinical Audit',icon:'🏥',cat:'Audit & Compliance Tools',type:'proactive',tags:['proactive','safety'],stage:'Clinical Practice Review',
 desc:'A quality improvement process that seeks to improve patient care and outcomes by systematically reviewing care against explicit criteria and implementing change.',
@@ -1175,8 +1131,7 @@ purpose:'To compare actual clinical practice with evidence-based standards and g
 when:'For any clinical process: medication administration, documentation, care bundles, consent, discharge planning.',
 steps:['Select a clinical topic for audit','Define evidence-based audit criteria and standards','Collect data on current practice (retrospective case review or prospective observation)','Compare results to criteria (% compliance)','Identify gaps','Implement improvement actions','Re-audit to measure improvement (complete the audit cycle)'],
 benefits:['Evidence-based practice improvement','Patient safety and outcomes improvement','Professional development','Regulatory compliance'],
-example:'A clinical audit of consent documentation reveals 34% of cases lack documented patient understanding — education and form redesign achieve 92% compliance on re-audit.'],
-related:['Internal Audit','CAPA','Clinical Pathways','Benchmarking']},
+example:'A clinical audit of consent documentation reveals 34% of cases lack documented patient understanding — education and form redesign achieve 92% compliance on re-audit.',related:['Internal Audit','CAPA','Clinical Pathways','Benchmarking']},
 
 {id:'tracer',name:'Tracer Methodology',icon:'🔎',cat:'Audit & Compliance Tools',type:'proactive',tags:['proactive','safety'],stage:'Accreditation Preparation',
 desc:'An evaluation methodology used by JCI and other accreditation bodies that follows the actual experience of a patient (individual tracer) or a system (system tracer) through all relevant processes and standards.',
@@ -1184,8 +1139,7 @@ purpose:'To evaluate real-world compliance with standards by tracing a patient\'
 when:'Especially during accreditation preparation (JCI, CBAHI, ISO, etc.), and as an ongoing quality monitoring activity.',
 steps:['Select a patient/case (or system) for tracing','Follow the patient\'s journey from entry to current point','Review all relevant documentation (medical record, medication chart)','Interview staff at each care point','Observe processes and environment','Document compliance and non-compliance','Use findings for CAPA and improvement'],
 benefits:['Tests real-world processes, not just policies','Required by JCI and most international accreditors','Comprehensive view of patient experience','Identifies cross-departmental gaps'],
-example:'A tracer of a post-surgical patient reveals gaps in pain reassessment documentation and breaks in the chain of antibiotic stewardship protocols.'],
-related:['Internal Audit','Clinical Audit','Gap Analysis','Mock Survey']},
+example:'A tracer of a post-surgical patient reveals gaps in pain reassessment documentation and breaks in the chain of antibiotic stewardship protocols.',related:['Internal Audit','Clinical Audit','Gap Analysis','Mock Survey']},
 
 {id:'gap-analysis',name:'Gap Analysis',icon:'🔭',cat:'Audit & Compliance Tools',type:'proactive',tags:['proactive'],stage:'Strategic & Compliance Assessment',
 desc:'A structured comparison between current performance or practices and a desired future state, standard, or benchmark — identifying the "gap" to be closed.',
@@ -1193,8 +1147,7 @@ purpose:'To clearly identify where an organization stands relative to its goals,
 when:'During strategic planning, accreditation preparation, before a QI project, or after benchmarking.',
 steps:['Define the desired state (standard, benchmark, goal)','Assess current state (data collection, observation, interviews)','Compare current vs. desired state for each criterion','Quantify gaps (percentage, score, absolute difference)','Prioritize gaps by impact and feasibility','Develop action plans to close prioritized gaps','Monitor progress over time'],
 benefits:['Clear picture of improvement priorities','Structured and systematic','Applicable to any standard or goal','Foundation for improvement planning'],
-example:'A gap analysis against JCI standards before accreditation survey identifies 47 standards with partial or non-compliance, enabling targeted preparation.'],
-related:['Benchmarking','SWOT Analysis','Internal Audit','Action Plan']},
+example:'A gap analysis against JCI standards before accreditation survey identifies 47 standards with partial or non-compliance, enabling targeted preparation.',related:['Benchmarking','SWOT Analysis','Internal Audit','Action Plan']},
 
 {id:'mock-survey',name:'Mock Survey',icon:'🎭',cat:'Audit & Compliance Tools',type:'proactive',tags:['proactive'],stage:'Accreditation Preparation',
 desc:'A simulation of an external accreditation or regulatory survey conducted by the organization itself or external consultants to identify gaps before the actual survey.',
@@ -1202,8 +1155,7 @@ purpose:'To identify and resolve compliance gaps before a real accreditation sur
 when:'3–6 months before an accreditation survey (JCI, CBAHI, ISO, etc.).',
 steps:['Assemble a mock survey team (internal experts or external consultants)','Use the same tracer methodology and standards as the actual survey','Conduct department visits, document reviews, and staff interviews over 2–3 days','Score compliance against standards','Identify and prioritize gaps','Implement CAPA for identified gaps','Conduct focused re-audit on critical areas'],
 benefits:['Identifies critical gaps before real survey','Reduces survey anxiety','Prepares staff for survey process','Maximizes accreditation success'],
-example:'A hospital\'s mock survey 3 months before JCI accreditation identifies 12 significant findings; all are resolved before the actual survey, which is passed first time.'],
-related:['Tracer Methodology','Gap Analysis','Internal Audit','CAPA']},
+example:'A hospital\'s mock survey 3 months before JCI accreditation identifies 12 significant findings; all are resolved before the actual survey, which is passed first time.',related:['Tracer Methodology','Gap Analysis','Internal Audit','CAPA']},
 
 // ─── 8. STRATEGIC & MANAGEMENT FRAMEWORKS ────────────────────
 {id:'balanced-scorecard',name:'Balanced Scorecard',icon:'🎯',cat:'Strategic & Management Frameworks',type:'proactive',tags:['proactive'],stage:'Strategic Performance Management',
@@ -1212,8 +1164,7 @@ purpose:'To link strategic objectives to measurable KPIs across all dimensions o
 when:'For strategic planning, performance reporting to boards, and organizational alignment.',
 steps:['Define the organizational strategy and strategic objectives','For each objective, identify measurable KPIs across 4 perspectives','Set targets for each KPI','Build the strategy map (causal relationships between objectives)','Implement data collection systems','Report and review performance quarterly','Adjust strategy based on performance'],
 benefits:['Balanced view of organizational health','Links strategy to operations','Prevents over-focus on financial metrics','Drives aligned organizational improvement'],
-example:'A hospital\'s Balanced Scorecard includes: Financial (cost per case), Patient (satisfaction scores), Process (surgical infection rate), Learning (training completion rate).'],
-related:['KPI Dashboards','SMART Goals','Benchmarking','Gantt Chart']},
+example:'A hospital\'s Balanced Scorecard includes: Financial (cost per case), Patient (satisfaction scores), Process (surgical infection rate), Learning (training completion rate).',related:['KPI Dashboards','SMART Goals','Benchmarking','Gantt Chart']},
 
 {id:'kpi-dashboard',name:'KPI Dashboard',icon:'📊',cat:'Strategic & Management Frameworks',type:'proactive',tags:['proactive'],stage:'Performance Monitoring',
 desc:'A visual display of key performance indicators (KPIs) that provides at-a-glance visibility into the most important metrics of an organization, department, or process.',
@@ -1221,8 +1172,7 @@ purpose:'To provide real-time or near-real-time visibility into performance and 
 when:'For ongoing operational management, board reporting, and staff transparency.',
 steps:['Identify the most important KPIs for each level (strategic, operational, clinical)','Set targets and thresholds for each KPI','Design the dashboard layout for clarity (charts, gauges, tables)','Connect to data sources','Implement automated reporting where possible','Review regularly at management meetings','Update KPIs as strategy evolves'],
 benefits:['Real-time performance visibility','Drives accountability','Enables rapid problem identification','Supports data-driven culture'],
-example:'An ICU dashboard shows APACHE scores, ventilator-associated pneumonia rates, length of stay, and mortality — updated daily for morning rounds.'],
-related:['Balanced Scorecard','SMART Goals','SPC','Run Chart']},
+example:'An ICU dashboard shows APACHE scores, ventilator-associated pneumonia rates, length of stay, and mortality — updated daily for morning rounds.',related:['Balanced Scorecard','SMART Goals','SPC','Run Chart']},
 
 {id:'smart-goals',name:'SMART Goals',icon:'🎯',cat:'Strategic & Management Frameworks',type:'proactive',tags:['proactive'],stage:'Objective Setting',
 desc:'A framework for setting clear, achievable objectives: Specific, Measurable, Achievable, Relevant, Time-bound.',
@@ -1230,8 +1180,7 @@ purpose:'To ensure improvement goals are clearly defined and achievable, avoidin
 when:'When setting any quality improvement objective, project goal, or performance target.',
 steps:['Specific: Define exactly what you want to achieve (who, what, where)','Measurable: Define how you will measure success (baseline, target, metric)','Achievable: Confirm the goal is realistic given resources and constraints','Relevant: Confirm the goal aligns with strategic priorities','Time-bound: Set a clear deadline for achievement','Write the complete SMART goal statement','Track and review progress regularly'],
 benefits:['Prevents vague, unmeasurable goals','Creates accountability','Facilitates progress tracking','Aligns effort to priorities'],
-example:'Vague: "Reduce infections." SMART: "Reduce CAUTI rates from 2.1 to ≤1.0 per 1,000 catheter days in the ICU by December 2025."'],
-related:['KPI Dashboard','Action Plan','PDCA','Balanced Scorecard']},
+example:'Vague: "Reduce infections." SMART: "Reduce CAUTI rates from 2.1 to ≤1.0 per 1,000 catheter days in the ICU by December 2025.',related:['KPI Dashboard','Action Plan','PDCA','Balanced Scorecard']},
 
 {id:'swot',name:'SWOT Analysis',icon:'🔲',cat:'Strategic & Management Frameworks',type:'proactive',tags:['proactive'],stage:'Strategic Assessment',
 desc:'A strategic planning framework that evaluates Strengths, Weaknesses, Opportunities, and Threats facing an organization or initiative.',
@@ -1239,8 +1188,7 @@ purpose:'To understand the internal and external factors affecting an organizati
 when:'During strategic planning, accreditation preparation, or QI project scoping.',
 steps:['Gather interdisciplinary input from all levels','Identify internal STRENGTHS (what you do well)','Identify internal WEAKNESSES (gaps, resource constraints)','Identify external OPPORTUNITIES (technology, policy, partnerships)','Identify external THREATS (competition, regulation, demographics)','Analyze interactions (Strength-Opportunity, Weakness-Threat)','Develop strategic actions based on the matrix'],
 benefits:['Holistic strategic view','Easy to understand and communicate','Team-based input','Foundation for strategic planning'],
-example:'A hospital\'s SWOT before accreditation: Strength=experienced staff; Weakness=outdated EMR; Opportunity=new government quality incentive; Threat=competitor hospital accreditation.'],
-related:['Gap Analysis','Benchmarking','Balanced Scorecard']},
+example:'A hospital\'s SWOT before accreditation: Strength=experienced staff; Weakness=outdated EMR; Opportunity=new government quality incentive; Threat=competitor hospital accreditation.',related:['Gap Analysis','Benchmarking','Balanced Scorecard']},
 
 {id:'gantt',name:'Gantt Chart',icon:'📅',cat:'Strategic & Management Frameworks',type:'proactive',tags:['proactive'],stage:'Project Planning & Management',
 desc:'A bar chart timeline that visually displays project tasks, their durations, start/end dates, and dependencies — showing the overall project schedule at a glance.',
@@ -1248,8 +1196,7 @@ purpose:'To plan, coordinate, and track tasks and milestones in a QI project or 
 when:'For any improvement project requiring structured planning and monitoring of multiple parallel tasks.',
 steps:['Define all project tasks','Estimate duration for each task','Identify dependencies (what must be done before what)','Assign responsible owners','Create the timeline (weeks or months on x-axis, tasks on y-axis)','Draw bars for each task','Monitor progress and update regularly'],
 benefits:['Visual project overview','Identifies critical path','Tracks progress easily','Facilitates communication to stakeholders'],
-example:'A CAPA Gantt chart shows 12 action items across 6 months, with dependencies identified — leadership reviews progress monthly against the timeline.'],
-related:['Action Plan','RACI Matrix','SMART Goals','PDCA']},
+example:'A CAPA Gantt chart shows 12 action items across 6 months, with dependencies identified — leadership reviews progress monthly against the timeline.',related:['Action Plan','RACI Matrix','SMART Goals','PDCA']},
 
 {id:'raci',name:'RACI Matrix',icon:'👥',cat:'Strategic & Management Frameworks',type:'proactive',tags:['proactive'],stage:'Responsibility Assignment',
 desc:'A responsibility assignment matrix that clarifies roles for each task or decision: Responsible (does the work), Accountable (owns the outcome), Consulted (provides input), Informed (receives updates).',
@@ -1257,8 +1204,7 @@ purpose:'To eliminate confusion about roles and responsibilities in complex proc
 when:'When launching a new project, redesigning a process, or when accountability gaps are causing quality problems.',
 steps:['List all tasks or decisions in rows','List all stakeholders/roles in columns','For each task, assign R, A, C, and I roles','Ensure each task has exactly one Accountable','Review with all stakeholders','Document and communicate','Update as roles change'],
 benefits:['Eliminates role confusion','Prevents tasks from falling through the cracks','Improves accountability','Speeds decision-making'],
-example:'A RACI for the infection control bundle shows nurses are Responsible for compliance, charge nurse Accountable, infection control team Consulted, ward manager Informed.'],
-related:['Gantt Chart','Action Plan','SIPOC','Swimlane Diagram']},
+example:'A RACI for the infection control bundle shows nurses are Responsible for compliance, charge nurse Accountable, infection control team Consulted, ward manager Informed.',related:['Gantt Chart','Action Plan','SIPOC','Swimlane Diagram']},
 
 // ─── 9. HEALTHCARE-SPECIFIC QA/QI ────────────────────────────
 {id:'clinical-pathways',name:'Clinical Pathways / Care Bundles',icon:'🏥',cat:'Healthcare-Specific QA/QI',type:'proactive',tags:['safety','proactive'],stage:'Standardized Clinical Care',
@@ -1267,8 +1213,7 @@ purpose:'To reduce care variation, ensure all evidence-based interventions are d
 when:'For high-volume, high-risk conditions and procedures: STEMI, sepsis, joint replacement, CAUTI prevention bundle, VAP prevention bundle.',
 steps:['Select the clinical condition or procedure','Review evidence-based guidelines','Define the care pathway: timeline, interventions, assessments, goals','Engage multidisciplinary team in pathway development','Implement with training','Monitor compliance and outcomes','Update regularly based on new evidence'],
 benefits:['Reduces care variation','Ensures all evidence-based interventions delivered','Improves outcomes','Reduces length of stay and cost'],
-example:'A sepsis bundle (blood cultures within 1 hour, IV antibiotics within 1 hour, lactate measurement) reduces sepsis mortality from 28% to 16%.'],
-related:['SOPs','Clinical Audit','Checklist','FMEA']},
+example:'A sepsis bundle (blood cultures within 1 hour, IV antibiotics within 1 hour, lactate measurement) reduces sepsis mortality from 28% to 16%.',related:['SOPs','Clinical Audit','Checklist','FMEA']},
 
 {id:'sops',name:'Standard Operating Procedures (SOPs)',icon:'📄',cat:'Healthcare-Specific QA/QI',type:'proactive',tags:['proactive'],stage:'Process Standardization',
 desc:'Written, step-by-step instructions that define how a specific task or process should be performed to ensure consistency, safety, and quality.',
@@ -1276,8 +1221,7 @@ purpose:'To standardize processes across staff, shifts, and time — reducing va
 when:'For any repetitive, critical, or complex process where variation leads to errors or inconsistent outcomes.',
 steps:['Identify the process requiring standardization','Document how the process is currently best performed','Write clear, step-by-step instructions','Include quality checks and safety warnings','Review with users (frontline staff)','Approve through relevant authority','Train all staff','Post at point of use','Review and update regularly'],
 benefits:['Reduces variation','Onboarding tool for new staff','Legal protection','Foundation for audits'],
-example:'An SOP for central line insertion specifies all steps, required equipment, checklist, and maximum sterile barrier precautions — reducing CLABSI rates by 60%.'],
-related:['Checklist','Clinical Pathways','Poka-Yoke','5S']},
+example:'An SOP for central line insertion specifies all steps, required equipment, checklist, and maximum sterile barrier precautions — reducing CLABSI rates by 60%.',related:['Checklist','Clinical Pathways','Poka-Yoke','5S']},
 
 {id:'checklist',name:'Checklist',icon:'☑️',cat:'Healthcare-Specific QA/QI',type:'proactive',tags:['proactive','safety'],stage:'Daily Operations / Safety Verification',
 desc:'A simple verification tool listing critical steps, checks, or items that must be completed or verified before proceeding. Harnesses the power of simplicity to prevent omission errors.',
@@ -1285,8 +1229,7 @@ purpose:'To ensure critical steps are never skipped, regardless of human cogniti
 when:'For any high-stakes process where step omission can cause harm: surgical safety, medication administration, equipment checks, patient handoffs.',
 steps:['Identify the process and its most critical steps','Define what must be checked (Do-Confirm or Read-Do format)','Keep it short (ideal: ≤10 items)','Test with frontline users','Refine based on feedback','Train all staff on use','Audit compliance with checklist use'],
 benefits:['Extremely simple — any literacy level can use','Prevents omission errors','Low cost and high impact','WHO Surgical Safety Checklist saved 500,000+ lives'],
-example:'The WHO Surgical Safety Checklist (Sign-In, Time-Out, Sign-Out) implemented in hospitals globally: reduces surgical mortality by 47% in some studies.'],
-related:['SOP','Clinical Pathways','Poka-Yoke','FMEA']},
+example:'The WHO Surgical Safety Checklist (Sign-In, Time-Out, Sign-Out) implemented in hospitals globally: reduces surgical mortality by 47% in some studies.',related:['SOP','Clinical Pathways','Poka-Yoke','FMEA']},
 
 {id:'incident-reporting',name:'Incident Reporting System',icon:'🚨',cat:'Healthcare-Specific QA/QI',type:'reactive',tags:['reactive','safety'],stage:'After Incident Occurs',
 desc:'A formal system for healthcare workers to report errors, near misses, adverse events, and unsafe conditions — creating a database for learning and improvement.',
@@ -1294,8 +1237,7 @@ purpose:'To capture safety events and near misses, identify patterns, and drive 
 when:'Whenever any unexpected event, error, near-miss, or unsafe condition is identified.',
 steps:['Create a non-punitive reporting culture (psychological safety is essential)','Design an accessible reporting system (paper or electronic)','Train all staff on what and how to report','Review all reports promptly','Analyze for patterns and root causes','Implement improvements based on findings','Provide feedback to reporters','Track trends over time'],
 benefits:['Captures safety signals','Enables proactive improvement from near-misses','Required by accreditation standards','Builds safety culture'],
-example:'A hospital\'s anonymous incident reporting system captures 150 near-miss medication events in 6 months; analysis reveals 70% involve look-alike/sound-alike drugs — systemic change implemented.'],
-related:['RCA','Near Miss Analysis','CAPA','Sentinel Event Review']},
+example:'A hospital\'s anonymous incident reporting system captures 150 near-miss medication events in 6 months; analysis reveals 70% involve look-alike/sound-alike drugs — systemic change implemented.',related:['RCA','Near Miss Analysis','CAPA','Sentinel Event Review']},
 
 {id:'news-score',name:'NEWS / Early Warning Scoring',icon:'🩺',cat:'Healthcare-Specific QA/QI',type:'proactive',tags:['safety','proactive'],stage:'Patient Deterioration Detection',
 desc:'The National Early Warning Score (NEWS/NEWS2) is a standardized clinical scoring system based on 7 physiological parameters to detect early patient deterioration and trigger appropriate clinical response.',
@@ -1303,8 +1245,7 @@ purpose:'To detect and respond to clinical deterioration early — before cardia
 when:'For all adult in-patients, at regular intervals and whenever clinical concern arises.',
 steps:['Measure and record 7 parameters: Respiration Rate, Oxygen Saturation, Supplemental Oxygen, Systolic BP, Pulse Rate, Level of Consciousness, Temperature','Calculate NEWS score','Apply escalation protocol based on score: Low (0–4), Medium (5–6), High (≥7 or any single extreme score)','Document and escalate as per protocol','Respond with appropriate clinical intervention','Re-assess after intervention'],
 benefits:['Reduces cardiac arrests and ICU admissions','Standardized clinical communication','Empowers nurses to escalate early','Evidence-based and validated'],
-example:'Implementation of NEWS scoring across a hospital reduces unexpected cardiac arrests by 35% in the first year.'],
-related:['Clinical Pathways','Checklist','Incident Reporting','CAPA']},
+example:'Implementation of NEWS scoring across a hospital reduces unexpected cardiac arrests by 35% in the first year.',related:['Clinical Pathways','Checklist','Incident Reporting','CAPA']},
 
 {id:'med-reconciliation',name:'Medication Reconciliation',icon:'💊',cat:'Healthcare-Specific QA/QI',type:'proactive',tags:['safety','proactive'],stage:'Medication Safety',
 desc:'The process of creating the most accurate list of all medications a patient is taking and comparing it to what is ordered at transitions of care to identify and resolve discrepancies.',
@@ -1312,8 +1253,7 @@ purpose:'To prevent medication errors at transitions of care (admission, transfe
 when:'At every transition of care: admission, transfer between units, and discharge.',
 steps:['Obtain Best Possible Medication History (BPMH) from patient, family, and pharmacy','Compare BPMH to admission/transfer orders','Identify discrepancies (omissions, duplications, interactions)','Resolve discrepancies with prescriber','Document final reconciled list','Communicate to receiving team or patient at discharge'],
 benefits:['Prevents medication errors at handoffs','Reduces adverse drug events','Patient safety standard globally','Accreditation requirement'],
-example:'Medication reconciliation at admission identifies 23% of patients had at least one discrepancy; 8% were clinically significant and potentially harmful.'],
-related:['Checklist','FMEA','Clinical Pathways','Incident Reporting']},
+example:'Medication reconciliation at admission identifies 23% of patients had at least one discrepancy; 8% were clinically significant and potentially harmful.',related:['Checklist','FMEA','Clinical Pathways','Incident Reporting']},
 
 {id:'mm-review',name:'Mortality & Morbidity (M&M) Review',icon:'📊',cat:'Healthcare-Specific QA/QI',type:'reactive',tags:['reactive','safety'],stage:'Learning from Clinical Outcomes',
 desc:'A regular, structured multidisciplinary conference that reviews cases of patient death, unexpected complications, or near-misses to identify learning opportunities and improve care.',
@@ -1321,8 +1261,7 @@ purpose:'To create a systematic mechanism for learning from adverse outcomes —
 when:'Regular meetings (weekly, monthly) reviewing all deaths and selected complications in a department.',
 steps:['Compile cases for review (deaths, complications, near-misses)','Prepare clinical summary for each case','Present cases in a structured, no-blame format','Identify contributing factors (clinical, system, communication)','Determine if outcome was preventable','Generate learning points and action items','Track action item completion','Share learning across the organization'],
 benefits:['Drives clinical quality improvement','Reduces preventable deaths','Builds culture of openness and learning','Required by most accreditation standards'],
-example:'Monthly M&M review identifies a pattern: 4 of 6 post-operative deaths had delayed recognition of sepsis — a NEWS scoring protocol is implemented.'],
-related:['RCA','Incident Reporting','Sentinel Event Review','CAPA']},
+example:'Monthly M&M review identifies a pattern: 4 of 6 post-operative deaths had delayed recognition of sepsis — a NEWS scoring protocol is implemented.',related:['RCA','Incident Reporting','Sentinel Event Review','CAPA']},
 
 {id:'infection-surveillance',name:'Infection Surveillance',icon:'🦠',cat:'Healthcare-Specific QA/QI',type:'proactive',tags:['safety','proactive'],stage:'HAI Monitoring & Prevention',
 desc:'A systematic, ongoing process of collecting, analyzing, and interpreting infection data to guide prevention efforts and control healthcare-associated infections (HAIs).',
@@ -1330,8 +1269,7 @@ purpose:'To detect HAI outbreaks early, monitor trends, evaluate prevention prog
 when:'Continuous monitoring for all high-risk infection categories: CLABSI, CAUTI, VAP, SSI, CDI.',
 steps:['Define surveillance case definitions','Collect denominator data (device-days, patient-days)','Identify cases meeting case definitions (lab data, medical records)','Calculate rates (per 1,000 device-days)','Plot on run or control charts','Compare to benchmark rates (NHSN)','Investigate clusters or signals','Implement targeted prevention measures'],
 benefits:['Early detection of outbreaks','Measures intervention effectiveness','Accreditation requirement','Protects patients and staff'],
-example:'Infection surveillance detects CLABSI rate exceeding control limits in the NICU — investigation identifies a gap in central line maintenance bundle compliance.'],
-related:['Control Chart','SPC','FMEA','Clinical Pathways','CAPA']},
+example:'Infection surveillance detects CLABSI rate exceeding control limits in the NICU — investigation identifies a gap in central line maintenance bundle compliance.',related:['Control Chart','SPC','FMEA','Clinical Pathways','CAPA']},
 
 // ─── 10. PROJECT & TEAM TOOLS ─────────────────────────────────
 {id:'action-plan',name:'Action Plan / Improvement Plan',icon:'📋',cat:'Project & Team Management Tools',type:'reactive',tags:['reactive','proactive'],stage:'Improvement Implementation',
@@ -1340,8 +1278,7 @@ purpose:'To ensure improvement decisions are translated into concrete, accountab
 when:'After any audit, RCA, M&M review, or QI project to document and track implementation of changes.',
 steps:['List all required improvement actions','Assign a responsible owner to each action','Set a realistic deadline','Define the evidence of completion','Assign a reviewer/verifier','Track status (Pending, In Progress, Completed, Overdue)','Review at regular intervals','Verify effectiveness after completion','Close out verified items'],
 benefits:['Prevents decisions from being forgotten','Creates accountability','Enables progress tracking','Required for CAPA documentation'],
-example:'After RCA of a patient fall, an action plan with 8 items (policy, training, equipment, reassessment) is tracked monthly — all items completed within 90 days.'],
-related:['CAPA','Gantt Chart','RACI Matrix','SMART Goals']},
+example:'After RCA of a patient fall, an action plan with 8 items (policy, training, equipment, reassessment) is tracked monthly — all items completed within 90 days.',related:['CAPA','Gantt Chart','RACI Matrix','SMART Goals']},
 
 {id:'stakeholder-analysis',name:'Stakeholder Analysis',icon:'👥',cat:'Project & Team Management Tools',type:'proactive',tags:['proactive'],stage:'Change Management',
 desc:'A process of identifying all individuals or groups affected by a change, assessing their level of interest and influence, and developing engagement strategies to build support.',
@@ -1349,8 +1286,7 @@ purpose:'To ensure all key stakeholders are engaged appropriately to support a Q
 when:'At the beginning of any major change initiative, accreditation project, or organizational redesign.',
 steps:['Identify all stakeholders (anyone who affects or is affected by the change)','Rate each stakeholder on: Interest (low-high) and Power/Influence (low-high)','Plot on a Power-Interest grid','Develop engagement strategy for each quadrant: Manage Closely (high power/interest), Keep Satisfied (high power/low interest), Keep Informed (low power/high interest), Monitor (low power/low interest)','Implement engagement actions','Monitor stakeholder sentiment throughout'],
 benefits:['Prevents change resistance','Ensures right people engaged','Builds coalition for change','Improves project success'],
-example:'Stakeholder analysis for new EMR implementation identifies pharmacy and nursing leadership as high-power/high-interest — their input shapes the rollout plan.'],
-related:['RACI Matrix','Change Management','Gantt Chart']},
+example:'Stakeholder analysis for new EMR implementation identifies pharmacy and nursing leadership as high-power/high-interest — their input shapes the rollout plan.',related:['RACI Matrix','Change Management','Gantt Chart']},
 
 {id:'complaint-analysis',name:'Complaint Analysis',icon:'📩',cat:'Project & Team Management Tools',type:'reactive',tags:['reactive'],stage:'Service Recovery & Improvement',
 desc:'The systematic collection, categorization, analysis, and response to patient or customer complaints to identify quality improvement opportunities and restore trust.',
@@ -1358,8 +1294,7 @@ purpose:'To use patient complaints as a valuable signal of quality gaps and serv
 when:'Continuously — every complaint should be analyzed, and aggregate data reviewed monthly.',
 steps:['Collect all complaints through multiple channels (verbal, written, online)','Acknowledge and respond to individual complaints promptly (24–48 hours)','Categorize complaints (communication, waiting, clinical care, environment, staff attitude, billing)','Quantify and trend by category over time','Identify the top 3–5 categories using Pareto Analysis','Investigate root causes of high-frequency categories','Implement improvements','Follow up with complainants','Report to quality committee'],
 benefits:['Patient feedback = free quality audit','Identifies patterns missed by clinical monitoring','Improves patient satisfaction and loyalty','Regulatory requirement'],
-example:'Analysis of 200 complaints reveals 45% relate to communication during ward rounds — doctors are trained on patient communication, reducing communication complaints by 60%.'],
-related:['Pareto Analysis','RCA','CAPA','Patient Satisfaction Surveys']},
+example:'Analysis of 200 complaints reveals 45% relate to communication during ward rounds — doctors are trained on patient communication, reducing communication complaints by 60%.',related:['Pareto Analysis','RCA','CAPA','Patient Satisfaction Surveys']},
 
 {id:'aar',name:'After Action Review (AAR)',icon:'🔄',cat:'Project & Team Management Tools',type:'reactive',tags:['reactive'],stage:'Post-Event Learning',
 desc:'A structured group learning process conducted immediately after an event, project, or exercise to identify: what was supposed to happen, what actually happened, why, and what to do differently next time.',
@@ -1367,8 +1302,7 @@ purpose:'To extract maximum learning from any significant event or project to im
 when:'After any major event, project, drill, inspection, surgery, major incident, or quality improvement cycle.',
 steps:['Conduct immediately or within 24–48 hours of the event','Ask 4 core questions: What did we set out to do? What actually happened? Why was there a difference? What will we do differently next time?','Include all participants — no rank in the room','Focus on learning, not blame','Document key insights and action items','Share learnings widely','Track action item implementation'],
 benefits:['Fast and simple learning tool','Captures learning before memory fades','Inclusive of all participants','Military-proven effectiveness'],
-example:'After a mass casualty drill, an AAR identifies communication gaps between triage and the receiving ward — resolved before the next drill.'],
-related:['PDSA','Incident Reporting','M&M Review','CAPA']},
+example:'After a mass casualty drill, an AAR identifies communication gaps between triage and the receiving ward — resolved before the next drill.',related:['PDSA','Incident Reporting','M&M Review','CAPA']},
 
 // BONUS TOOLS
 {id:'5s6s',name:'6S (5S + Safety)',icon:'🦺',cat:'Lean Tools',type:'proactive',tags:['lean','proactive','safety'],stage:'Workplace Safety & Organization',
@@ -1377,8 +1311,7 @@ purpose:'To ensure workplace organization and standardization explicitly incorpo
 when:'In clinical and non-clinical areas where safety hazards are present alongside workflow efficiency concerns.',
 steps:['Complete all 5 steps of 5S','Add safety walk-through to each shine and audit step','Identify and address all safety hazards (sharp disposal, fire exits, spill kits, signage)','Include safety items in 5S audit checklist','Train staff on safety-specific items','Track safety incidents in the workspace'],
 benefits:['Explicitly integrates safety into workplace organization','Reduces workplace injuries','Required for healthcare settings','Builds safety culture'],
-example:'A 6S implementation in the operating theater addresses fire safety (electrical cord management), sharps disposal compliance, and emergency equipment access.'],
-related:['5S','Lean','Poka-Yoke','Gemba Walk']},
+example:'A 6S implementation in the operating theater addresses fire safety (electrical cord management), sharps disposal compliance, and emergency equipment access.',related:['5S','Lean','Poka-Yoke','Gemba Walk']},
 
 {id:'patient-satisfaction',name:'Patient Satisfaction Survey / HCAHPS',icon:'⭐',cat:'Healthcare-Specific QA/QI',type:'proactive',tags:['proactive','safety'],stage:'Patient Experience Measurement',
 desc:'Standardized instruments measuring patients\' perceptions of their hospital experience. HCAHPS (Hospital Consumer Assessment of Healthcare Providers and Systems) is the most widely used standardized survey in the US; similar tools used globally.',
@@ -1386,8 +1319,7 @@ purpose:'To measure the patient perspective on care quality and use results to d
 when:'Ongoing — typically distributed post-discharge or at discharge.',
 steps:['Select or develop a validated survey instrument','Determine sampling method (census, random sample, or stratified)','Distribute surveys through appropriate channels','Collect and analyze results','Break down by domain: communication, responsiveness, pain management, discharge information, overall rating','Compare to benchmarks','Share results with frontline staff','Develop targeted improvement actions for low-scoring domains'],
 benefits:['Patient-centered measurement','Regulatory requirement in many countries','Linked to payment (value-based care)','Identifies experience gaps clinical monitoring misses'],
-example:'HCAHPS results show nurse responsiveness scores in the bottom quartile — hourly rounding protocol implemented; scores improve to top quartile within 6 months.'],
-related:['Complaint Analysis','Benchmarking','KPI Dashboard','CQI']},
+example:'HCAHPS results show nurse responsiveness scores in the bottom quartile — hourly rounding protocol implemented; scores improve to top quartile within 6 months.',related:['Complaint Analysis','Benchmarking','KPI Dashboard','CQI']},
 
 {id:'drug-reconciliation',name:'LASA Drug Management',icon:'💉',cat:'Healthcare-Specific QA/QI',type:'proactive',tags:['safety','proactive'],stage:'Medication Safety',
 desc:'Specialized protocols for managing Look-Alike/Sound-Alike (LASA) drugs — medications with similar names or appearances that are frequently confused, causing serious medication errors.',
@@ -1395,8 +1327,7 @@ purpose:'To prevent medication errors caused by confusion between drugs with sim
 when:'As part of medication safety programs, pharmacy management, and nursing education.',
 steps:['Create a hospital-specific LASA drug list','Physically separate LASA drugs in storage (never store together)','Apply TALL man lettering to drug labels (e.g., DOPamine vs. DOBUtamine)','Use distinct labeling and color-coding','Require double-check for high-alert LASA drugs','Include in all new staff orientation','Review list annually for additions'],
 benefits:['Reduces medication errors significantly','Low-cost, high-impact intervention','Required by WHO and accreditation standards','Protects all patient populations'],
-example:'Hospital introduces TALL man lettering and physical separation for 30 LASA drug pairs; medication look-alike errors drop by 75% in one year.'],
-related:['FMEA','Poka-Yoke','Checklist','Medication Reconciliation','Incident Reporting']},
+example:'Hospital introduces TALL man lettering and physical separation for 30 LASA drug pairs; medication look-alike errors drop by 75% in one year.',related:['FMEA','Poka-Yoke','Checklist','Medication Reconciliation','Incident Reporting']},
 ];
 
 // ══════════════════════════════════════════
