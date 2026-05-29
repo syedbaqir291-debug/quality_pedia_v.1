@@ -6,7 +6,7 @@
 <title>Qualitypedia – OMAC</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
 <style>
 /* ============================================================
    CSS VARIABLES – LIGHT & DARK
@@ -578,11 +578,11 @@ footer span{color:var(--text3)}
     <p class="sub">Please enter your details to access the complete Quality Tools encyclopedia.</p>
     <div class="form-group">
       <label>Your Name</label>
-      <input type="text" id="inputName" placeholder="e.g. Dr. Ali" autocomplete="name"/>
+      <input type="text" id="inputName" placeholder="e.g. Ahmad Ali" autocomplete="name"/>
     </div>
     <div class="form-group">
       <label>Organization / Institution</label>
-      <input type="text" id="inputOrg" placeholder="e.g. XYZ Hospital" autocomplete="organization"/>
+      <input type="text" id="inputOrg" placeholder="e.g. XYZ Hospital / Organization" autocomplete="organization"/>
     </div>
     <div class="form-group">
       <label>Profession / Role</label>
@@ -686,7 +686,7 @@ footer span{color:var(--text3)}
     <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:16px;color:var(--text)">Contact & Connect</h3>
     <div class="about-links">
       <a class="about-link" href="mailto:syedbaqir291@gmail.com">✉️ syedbaqir291@gmail.com</a>
-      <a class="about-link" href="https://pk.linkedin.com/in/syed-muhammad-baqir-7b822418a" target="_blank">🐙 Linked in Syed M Baqir</a>
+      <a class="about-link" href="https://pk.linkedin.com/in/syed-muhammad-baqir-7b822418a" target="_blank">💼 LinkedIn — Syed M Baqir</a>
     </div>
     <div class="about-divider"></div>
     <p style="font-size:.82rem;color:var(--text3)">© 2025 OMAC Developers by S M Baqir. All rights reserved. Qualitypedia – OMAC is an open-access educational resource.</p>
@@ -696,7 +696,41 @@ footer span{color:var(--text3)}
 <!-- ══════════════════════════════════════════
      USER REGISTRY PAGE
 ══════════════════════════════════════════ -->
+<div id="log-page">
+  <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:6px;color:var(--text)">User Registry</h2>
+  <p style="color:var(--text2);margin-bottom:20px;font-size:.92rem">Every visitor who registers is automatically logged to Google Sheets in real time.</p>
 
+  <!-- Google Sheets live badge -->
+  <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:24px">
+    <div style="display:inline-flex;align-items:center;gap:10px;background:var(--pro-bg);border:1px solid var(--pro-text);border-radius:12px;padding:12px 20px;">
+      <span style="font-size:1.3rem">📊</span>
+      <div>
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--pro-text)">Live Google Sheets Log</div>
+        <div style="font-size:.8rem;color:var(--text2);margin-top:2px">All registrations sync automatically to your spreadsheet</div>
+      </div>
+      <a href="https://docs.google.com/spreadsheets" target="_blank"
+         style="margin-left:8px;padding:7px 16px;background:var(--pro-text);color:#fff;border-radius:8px;font-size:.8rem;font-weight:600;text-decoration:none;white-space:nowrap">
+        Open Sheets ↗
+      </a>
+    </div>
+    <div style="display:inline-flex;align-items:center;gap:10px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:12px 20px;">
+      <span style="font-size:1.3rem">💾</span>
+      <div>
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text2)">Local Cache</div>
+        <div style="font-size:.8rem;color:var(--text3);margin-top:2px">Visitors registered on this device</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="log-table-wrap">
+    <div id="logContent">
+      <div class="empty-log"><div class="big">📋</div><p>No users registered yet.</p></div>
+    </div>
+  </div>
+  <p style="font-size:.78rem;color:var(--text3);margin-top:16px;text-align:center">
+    ℹ️ This panel shows registrations from <b>this device</b>. For the complete list of all visitors across all devices, open your <b>Google Sheet</b> — every registration is logged there automatically.
+  </p>
+</div>
 
 <!-- ══════════════════════════════════════════
      DETAIL PANEL
@@ -1774,82 +1808,421 @@ function downloadExcel(){
   if(!currentTool) return;
   const t = currentTool;
   const wb = XLSX.utils.book_new();
-  
-  // Sheet 1: Tool Information
-  const infoData = [
-    ['QUALITYPEDIA – OMAC', '', 'OMAC Developers by S M Baqir'],
-    [''],
-    ['Tool Name:', t.name],
-    ['Category:', t.cat],
-    ['Approach:', t.type==='proactive'?'Proactive (Prevention)':'Reactive (Investigation)'],
-    ['Use Stage:', t.stage],
-    [''],
-    ['OVERVIEW'],
-    [t.desc],
-    [''],
-    ['PURPOSE'],
-    [t.purpose],
-    [''],
-    ['WHEN TO USE'],
-    [t.when],
-    [''],
-    ['HOW TO APPLY'],
-    ...(t.steps||[]).map((s,i)=>[`Step ${i+1}:`, s]),
-    [''],
-    ['KEY BENEFITS'],
-    ...(t.benefits||[]).map(b=>['•', b]),
-    [''],
-    ['EXAMPLE'],
-    [t.example],
-    [''],
-    ['RELATED TOOLS'],
-    [(t.related||[]).join(', ')],
-    [''],
-    ['Qualitypedia – OMAC | OMAC Developers by S M Baqir | syedbaqir291@gmail.com'],
+
+  // ── SHARED STYLE PALETTE ──────────────────────────────────────
+  const C = {
+    brand:    'FFB5490F',  // deep orange-brown (accent)
+    brandDk:  'FF8B3208',  // darker brand
+    gold:     'FFC8973A',  // gold
+    goldLt:   'FFFFF3E8',  // very light gold (tag-bg)
+    cream:    'FFF5F3EE',  // page background
+    cream2:   'FFEDEAE3',  // bg2
+    proGreen: 'FF1A6B3A',  // proactive green text
+    proGreenBg:'FFE8F4EE', // proactive green bg
+    reRed:    'FF8B1A1A',  // reactive red text
+    reRedBg:  'FFFDE8E8',  // reactive red bg
+    white:    'FFFFFFFF',
+    text:     'FF1A1714',
+    text2:    'FF5A5650',
+    text3:    'FF8A8480',
+    border:   'FFD9D4C7',
+    rowAlt:   'FFFAF8F5',  // alternating row
+    stepBg:   'FFEDEAE3',  // step background
+    subHdr:   'FFF0EDE6',  // sub-header row
+  };
+
+  // ── STYLE FACTORIES ───────────────────────────────────────────
+  const font  = (sz=10, bold=false, color='FF1A1714', name='Calibri') =>
+    ({name, sz, bold, color:{rgb:color}});
+  const fill  = (fgColor) => ({type:'pattern', pattern:'solid', fgColor:{rgb:fgColor}});
+  const align = (h='left', v='center', wrap=false) =>
+    ({horizontal:h, vertical:v, wrapText:wrap});
+  const border = (style='thin', color='FFD9D4C7') => ({
+    top:   {style, color:{rgb:color}},
+    bottom:{style, color:{rgb:color}},
+    left:  {style, color:{rgb:color}},
+    right: {style, color:{rgb:color}},
+  });
+  const thickBorder = () => border('medium','FFB5490F');
+
+  // Pre-built cell styles
+  const S = {
+    // Big header row (brand bar)
+    mainHdr: { font:font(14,true,C.white), fill:fill(C.brand), alignment:align('left','center'), border:border('thin',C.brand) },
+    mainHdrR:{ font:font(9,false,C.goldLt), fill:fill(C.brand), alignment:align('right','center'), border:border('thin',C.brand) },
+
+    // Tool name banner
+    toolName:{ font:font(16,true,C.white), fill:fill(C.brandDk), alignment:align('left','center'), border:thickBorder() },
+    toolNameR:{ font:font(9,false,C.goldLt), fill:fill(C.brandDk), alignment:align('right','center'), border:thickBorder() },
+
+    // Category info row
+    infoLabel:{ font:font(9,true,C.brand), fill:fill(C.cream2), alignment:align('right','center'), border:border() },
+    infoValue:{ font:font(9,false,C.text), fill:fill(C.cream), alignment:align('left','center',true), border:border() },
+
+    // Approach badge – proactive
+    badgePro: { font:font(9,true,C.proGreen), fill:fill(C.proGreenBg), alignment:align('center','center'), border:border('thin',C.proGreen) },
+    badgeRe:  { font:font(9,true,C.reRed),   fill:fill(C.reRedBg),    alignment:align('center','center'), border:border('thin',C.reRed)  },
+
+    // Section heading (orange stripe)
+    secHdr:   { font:font(10,true,C.white), fill:fill(C.brand), alignment:align('left','center'), border:border('thin',C.brand) },
+    secHdrEnd:{ font:font(10,true,C.white), fill:fill(C.brand), alignment:align('right','center'),border:border('thin',C.brand) },
+
+    // Sub-header (column headers inside table)
+    colHdr:   { font:font(9,true,C.brand), fill:fill(C.subHdr), alignment:align('center','center'), border:border('medium',C.gold) },
+
+    // Body text cells
+    bodyWrap: { font:font(9,false,C.text2), fill:fill(C.white),  alignment:align('left','top',true),   border:border() },
+    bodyAlt:  { font:font(9,false,C.text2), fill:fill(C.rowAlt), alignment:align('left','top',true),   border:border() },
+    bodyC:    { font:font(9,false,C.text2), fill:fill(C.white),  alignment:align('center','center'),   border:border() },
+    bodyCAlt: { font:font(9,false,C.text2), fill:fill(C.rowAlt), alignment:align('center','center'),   border:border() },
+
+    // Step number bubble
+    stepNum:  { font:font(10,true,C.white),  fill:fill(C.brand), alignment:align('center','center'), border:border('thin',C.brand) },
+    stepText: { font:font(9,false,C.text),   fill:fill(C.stepBg), alignment:align('left','center',true), border:border() },
+
+    // Gold highlight
+    goldHdr:  { font:font(10,true,C.text), fill:fill(C.gold), alignment:align('center','center'), border:border('medium',C.brandDk) },
+
+    // Input cell (user fills in)
+    input:    { font:font(9,false,C.text), fill:fill(C.white), alignment:align('left','center',true), border:border('medium',C.gold) },
+    inputLabel:{ font:font(9,true,C.brand), fill:fill(C.cream2), alignment:align('right','center'), border:border() },
+
+    // Status cells
+    statPend: { font:font(8,true,'FF7A5200'), fill:fill('FFFFF3CD'), alignment:align('center','center'), border:border() },
+    statDone: { font:font(8,true,C.proGreen),fill:fill(C.proGreenBg), alignment:align('center','center'), border:border() },
+    statNA:   { font:font(8,false,C.text3),  fill:fill(C.cream2), alignment:align('center','center'), border:border() },
+
+    // Footer
+    footer:   { font:font(8,false,C.text3), fill:fill(C.cream2), alignment:align('center','center'), border:border() },
+
+    // Empty / spacer
+    empty:    { font:font(9), fill:fill(C.white), border:border('hair',C.cream2) },
+    emptyBrand:{ font:font(9), fill:fill(C.brand), border:border('thin',C.brand) },
+  };
+
+  // ── HELPER: set a cell with value + style ─────────────────────
+  function sc(ws, addr, v, s){
+    const t2 = (typeof v === 'number') ? 'n' : 's';
+    ws[addr] = { v: v ?? '', t: t2, s };
+  }
+
+  // ── HELPER: encode cell address ───────────────────────────────
+  const cols = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  function addr(c, r){ return cols[c] + (r+1); }
+
+  // ── HELPER: fill a merged range with same style ───────────────
+  function fillRange(ws, r, c1, c2, v, s){
+    sc(ws, addr(c1,r), v, s);
+    for(let c=c1+1;c<=c2;c++) sc(ws, addr(c,r), '', {...s, font:{...s.font}});
+  }
+
+  // ── HELPER: add merge ─────────────────────────────────────────
+  function mg(r1,c1,r2,c2){ return {s:{r:r1,c:c1},e:{r:r2,c:c2}}; }
+
+  // ═══════════════════════════════════════════════════════════════
+  // SHEET 1 — TOOL OVERVIEW
+  // ═══════════════════════════════════════════════════════════════
+  const ws1 = {};
+  const m1 = []; // merges
+  let r = 0;
+
+  // Row 0 – Brand header (cols A–F = 0–5)
+  fillRange(ws1, r, 0, 4, 'QUALITYPEDIA – OMAC  |  Quality Tools Encyclopedia', S.mainHdr);
+  sc(ws1, addr(5,r), 'OMAC Developers by S M Baqir', S.mainHdrR);
+  m1.push(mg(r,0,r,4));
+  r++;
+
+  // Row 1 – Tool name banner
+  fillRange(ws1, r, 0, 4, `${t.icon}  ${t.name}`, S.toolName);
+  sc(ws1, addr(5,r), t.type==='proactive'?'🟢 PROACTIVE':'🔴 REACTIVE', t.type==='proactive'?S.badgePro:S.badgeRe);
+  m1.push(mg(r,0,r,4));
+  r++;
+
+  // Row 2 – Meta info row
+  sc(ws1, addr(0,r),'Category',S.infoLabel);
+  fillRange(ws1, r, 1, 2, t.cat, S.infoValue);
+  sc(ws1, addr(3,r),'Stage',S.infoLabel);
+  fillRange(ws1, r, 4, 5, t.stage, S.infoValue);
+  m1.push(mg(r,1,r,2)); m1.push(mg(r,4,r,5));
+  r++;
+
+  // Spacer
+  for(let c=0;c<6;c++) sc(ws1,addr(c,r),'',S.empty); r++;
+
+  // ── SECTION: OVERVIEW ─────────────────────────────────────────
+  fillRange(ws1,r,0,5,'📋  OVERVIEW',S.secHdr); m1.push(mg(r,0,r,5)); r++;
+  fillRange(ws1,r,0,5, t.desc, S.bodyWrap); m1.push(mg(r,0,r,5));
+  ws1['!rows'] = ws1['!rows']||[]; ws1['!rows'][r] = {hpt:50}; r++;
+  for(let c=0;c<6;c++) sc(ws1,addr(c,r),'',S.empty); r++;
+
+  // ── SECTION: PURPOSE ──────────────────────────────────────────
+  fillRange(ws1,r,0,5,'🎯  PURPOSE',S.secHdr); m1.push(mg(r,0,r,5)); r++;
+  fillRange(ws1,r,0,5, t.purpose||'', S.bodyWrap); m1.push(mg(r,0,r,5));
+  ws1['!rows']=ws1['!rows']||[]; ws1['!rows'][r]={hpt:44}; r++;
+  for(let c=0;c<6;c++) sc(ws1,addr(c,r),'',S.empty); r++;
+
+  // ── SECTION: WHEN TO USE ──────────────────────────────────────
+  fillRange(ws1,r,0,5,'⏰  WHEN TO USE',S.secHdr); m1.push(mg(r,0,r,5)); r++;
+  fillRange(ws1,r,0,5, t.when||'', S.bodyWrap); m1.push(mg(r,0,r,5));
+  ws1['!rows']=ws1['!rows']||[]; ws1['!rows'][r]={hpt:44}; r++;
+  for(let c=0;c<6;c++) sc(ws1,addr(c,r),'',S.empty); r++;
+
+  // ── SECTION: HOW TO APPLY (steps) ─────────────────────────────
+  fillRange(ws1,r,0,5,'🔢  HOW TO APPLY — STEP BY STEP',S.secHdr); m1.push(mg(r,0,r,5)); r++;
+  // column headers
+  sc(ws1,addr(0,r),'Step',S.colHdr);
+  fillRange(ws1,r,1,5,'Action / Description',S.colHdr); m1.push(mg(r,1,r,5)); r++;
+  (t.steps||[]).forEach((s,i)=>{
+    const isAlt = i%2===1;
+    sc(ws1,addr(0,r), i+1, S.stepNum);
+    fillRange(ws1,r,1,5, s, isAlt?S.bodyAlt:S.bodyWrap);
+    m1.push(mg(r,1,r,5));
+    ws1['!rows']=ws1['!rows']||[]; ws1['!rows'][r]={hpt:36};
+    r++;
+  });
+  for(let c=0;c<6;c++) sc(ws1,addr(c,r),'',S.empty); r++;
+
+  // ── SECTION: KEY BENEFITS ─────────────────────────────────────
+  fillRange(ws1,r,0,5,'✅  KEY BENEFITS',S.secHdr); m1.push(mg(r,0,r,5)); r++;
+  sc(ws1,addr(0,r),'#',S.colHdr);
+  fillRange(ws1,r,1,5,'Benefit',S.colHdr); m1.push(mg(r,1,r,5)); r++;
+  (t.benefits||[]).forEach((b,i)=>{
+    const isAlt = i%2===1;
+    sc(ws1,addr(0,r), i+1, isAlt?S.bodyCAlt:S.bodyC);
+    fillRange(ws1,r,1,5, b, isAlt?S.bodyAlt:S.bodyWrap);
+    m1.push(mg(r,1,r,5));
+    ws1['!rows']=ws1['!rows']||[]; ws1['!rows'][r]={hpt:30};
+    r++;
+  });
+  for(let c=0;c<6;c++) sc(ws1,addr(c,r),'',S.empty); r++;
+
+  // ── SECTION: REAL-WORLD EXAMPLE ───────────────────────────────
+  fillRange(ws1,r,0,5,'🏥  REAL-WORLD EXAMPLE',S.secHdr); m1.push(mg(r,0,r,5)); r++;
+  fillRange(ws1,r,0,5, t.example||'', {...S.bodyWrap, fill:fill('FFFFF8F0')}); m1.push(mg(r,0,r,5));
+  ws1['!rows']=ws1['!rows']||[]; ws1['!rows'][r]={hpt:56}; r++;
+  for(let c=0;c<6;c++) sc(ws1,addr(c,r),'',S.empty); r++;
+
+  // ── SECTION: RELATED TOOLS ────────────────────────────────────
+  fillRange(ws1,r,0,5,'🔗  RELATED TOOLS',S.secHdr); m1.push(mg(r,0,r,5)); r++;
+  (t.related||[]).forEach((rel,i)=>{
+    const c_= i%6;
+    if(c_===0 && i>0){ r++; }
+    sc(ws1, addr(c_,r), `  ${rel}  `, S.badgePro);
+  });
+  r++;
+  for(let c=0;c<6;c++) sc(ws1,addr(c,r),'',S.empty); r++;
+
+  // ── FOOTER ────────────────────────────────────────────────────
+  fillRange(ws1,r,0,5,'Qualitypedia – OMAC  |  OMAC Developers by S M Baqir  |  syedbaqir291@gmail.com  |  © 2025 All Rights Reserved',S.footer);
+  m1.push(mg(r,0,r,5));
+
+  ws1['!ref'] = `A1:F${r+1}`;
+  ws1['!merges'] = m1;
+  ws1['!cols'] = [{wch:6},{wch:22},{wch:22},{wch:18},{wch:18},{wch:20}];
+  XLSX.utils.book_append_sheet(wb, ws1, '📋 Tool Overview');
+
+  // ═══════════════════════════════════════════════════════════════
+  // SHEET 2 — IMPLEMENTATION PLAN
+  // ═══════════════════════════════════════════════════════════════
+  const ws2 = {};
+  const m2 = [];
+  r = 0;
+
+  // Header
+  fillRange(ws2,r,0,5,'QUALITYPEDIA – OMAC  |  Implementation & Action Plan',S.mainHdr); m2.push(mg(r,0,r,4));
+  sc(ws2,addr(5,r),'OMAC Developers by S M Baqir',S.mainHdrR); r++;
+  fillRange(ws2,r,0,5,`TOOL: ${t.icon} ${t.name}`,S.toolName); m2.push(mg(r,0,r,5)); r++;
+
+  // Project info block
+  const infoStyle = (lbl) => lbl ? S.inputLabel : S.input;
+  const labels2 = [
+    ['Organization:','','Department / Unit:','','Project Lead:',''],
+    ['Project Start Date:','','Target Completion:','','Status:',''],
   ];
-  const ws1 = XLSX.utils.aoa_to_sheet(infoData);
-  ws1['!cols'] = [{wch:20},{wch:80},{wch:30}];
-  XLSX.utils.book_append_sheet(wb, ws1, 'Tool Information');
-  
-  // Sheet 2: Implementation Template
-  const templateData = [
-    ['QUALITYPEDIA – OMAC', 'Implementation Template', 'OMAC Developers by S M Baqir'],
-    [''],
-    [`TOOL: ${t.name}`, '', 'DATE:', '', 'ORGANIZATION:', ''],
-    ['TEAM MEMBERS:', '', '', '', 'FACILITATOR:', ''],
-    [''],
-    ['IMPLEMENTATION STEPS', 'Responsible', 'Target Date', 'Status', 'Evidence of Completion', 'Notes'],
-    ...(t.steps||[]).map((s,i)=>[s,'','','Pending','','']),
-    [''],
-    ['EXPECTED BENEFITS', 'Baseline Measure', 'Target', 'Achieved', 'Date Verified', 'Comments'],
-    ...(t.benefits||[]).map(b=>[b,'','','','']),
-    [''],
-    ['Action Item', 'Owner', 'Due Date', 'Priority', 'Status', 'Notes'],
-    ['','','','High','Not Started',''],
-    ['','','','Medium','Not Started',''],
-    ['','','','Low','Not Started',''],
-    [''],
-    ['Qualitypedia – OMAC | OMAC Developers by S M Baqir | syedbaqir291@gmail.com'],
+  labels2.forEach(row=>{
+    row.forEach((v,c)=>{
+      sc(ws2,addr(c,r), v, (c%2===0)?S.inputLabel:S.input);
+    });
+    r++;
+  });
+  for(let c=0;c<6;c++) sc(ws2,addr(c,r),'',S.empty); r++;
+
+  // Steps table
+  fillRange(ws2,r,0,5,'📌  IMPLEMENTATION STEPS',S.secHdr); m2.push(mg(r,0,r,5)); r++;
+  const stepHdrs2 = ['#','Implementation Step','Responsible Person','Target Date','Status','Verification / Notes'];
+  stepHdrs2.forEach((h,c)=> sc(ws2,addr(c,r),h,S.colHdr)); r++;
+  const statusOpts = ['Pending','In Progress','Completed','Overdue'];
+  (t.steps||[]).forEach((s,i)=>{
+    const isAlt = i%2===1;
+    const bg = isAlt?S.bodyAlt:S.bodyWrap;
+    sc(ws2,addr(0,r),i+1,S.stepNum);
+    sc(ws2,addr(1,r),s,bg);
+    sc(ws2,addr(2,r),'',S.input);
+    sc(ws2,addr(3,r),'',S.input);
+    sc(ws2,addr(4,r),'Pending',S.statPend);
+    sc(ws2,addr(5,r),'',S.input);
+    ws2['!rows']=ws2['!rows']||[]; ws2['!rows'][r]={hpt:36};
+    r++;
+  });
+  for(let c=0;c<6;c++) sc(ws2,addr(c,r),'',S.empty); r++;
+
+  // Benefits tracker
+  fillRange(ws2,r,0,5,'✅  EXPECTED BENEFITS TRACKER',S.secHdr); m2.push(mg(r,0,r,5)); r++;
+  const bHdrs = ['#','Expected Benefit','Baseline Measure','Target Value','Achieved','Date Verified'];
+  bHdrs.forEach((h,c)=> sc(ws2,addr(c,r),h,S.colHdr)); r++;
+  (t.benefits||[]).forEach((b,i)=>{
+    const isAlt = i%2===1;
+    sc(ws2,addr(0,r),i+1,isAlt?S.bodyCAlt:S.bodyC);
+    sc(ws2,addr(1,r),b,isAlt?S.bodyAlt:S.bodyWrap);
+    sc(ws2,addr(2,r),'',S.input);
+    sc(ws2,addr(3,r),'',S.input);
+    sc(ws2,addr(4,r),'',S.input);
+    sc(ws2,addr(5,r),'',S.input);
+    ws2['!rows']=ws2['!rows']||[]; ws2['!rows'][r]={hpt:30};
+    r++;
+  });
+  for(let c=0;c<6;c++) sc(ws2,addr(c,r),'',S.empty); r++;
+
+  // Risks / barriers
+  fillRange(ws2,r,0,5,'⚠️  RISKS & BARRIERS',S.secHdr); m2.push(mg(r,0,r,5)); r++;
+  ['Risk / Barrier','Likelihood (H/M/L)','Impact (H/M/L)','Mitigation Strategy','Owner','Status'].forEach((h,c)=>sc(ws2,addr(c,r),h,S.colHdr)); r++;
+  for(let i=0;i<4;i++){
+    const isAlt=i%2===1;
+    for(let c=0;c<6;c++) sc(ws2,addr(c,r),'',isAlt?S.bodyAlt:S.input);
+    ws2['!rows']=ws2['!rows']||[]; ws2['!rows'][r]={hpt:28}; r++;
+  }
+  for(let c=0;c<6;c++) sc(ws2,addr(c,r),'',S.empty); r++;
+
+  // Footer
+  fillRange(ws2,r,0,5,'Qualitypedia – OMAC  |  OMAC Developers by S M Baqir  |  syedbaqir291@gmail.com  |  © 2025 All Rights Reserved',S.footer);
+  m2.push(mg(r,0,r,5));
+
+  ws2['!ref'] = `A1:F${r+1}`;
+  ws2['!merges'] = m2;
+  ws2['!cols'] = [{wch:5},{wch:32},{wch:20},{wch:16},{wch:16},{wch:24}];
+  XLSX.utils.book_append_sheet(wb, ws2, '📌 Implementation Plan');
+
+  // ═══════════════════════════════════════════════════════════════
+  // SHEET 3 — MONITORING LOG
+  // ═══════════════════════════════════════════════════════════════
+  const ws3 = {};
+  const m3 = [];
+  r = 0;
+
+  // Header
+  fillRange(ws3,r,0,6,'QUALITYPEDIA – OMAC  |  Performance Monitoring Log',S.mainHdr); m3.push(mg(r,0,r,5));
+  sc(ws3,addr(6,r),'OMAC Developers by S M Baqir',S.mainHdrR); r++;
+  fillRange(ws3,r,0,6,`MONITORING LOG: ${t.icon} ${t.name}`,S.toolName); m3.push(mg(r,0,r,6)); r++;
+
+  // Setup block
+  const setupRows3 = [
+    ['Process / Department:','','','Monitoring Period:','','',''],
+    ['Quality Indicator:','','','Frequency:','','',''],
+    ['Baseline Value:','','','Target Value:','','',''],
   ];
-  const ws2 = XLSX.utils.aoa_to_sheet(templateData);
-  ws2['!cols'] = [{wch:40},{wch:20},{wch:15},{wch:15},{wch:25},{wch:30}];
-  XLSX.utils.book_append_sheet(wb, ws2, 'Implementation Template');
-  
-  // Sheet 3: Monitoring Log
-  const monitorData = [
-    ['QUALITYPEDIA – OMAC', 'Monitoring Log', 'OMAC Developers by S M Baqir'],
-    [''],
-    [`TOOL: ${t.name}`, '', 'PROCESS:', '', 'START DATE:', ''],
-    [''],
-    ['Date', 'Measure/Indicator', 'Target', 'Actual Value', 'Variance', 'Actions Taken', 'Recorded By'],
-    ...Array(10).fill(['','','','','','','']),
-    [''],
-    ['Qualitypedia – OMAC | OMAC Developers by S M Baqir | syedbaqir291@gmail.com'],
+  setupRows3.forEach(row=>{
+    row.forEach((v,c)=>{
+      const isLabel = (c===0||c===3);
+      sc(ws3,addr(c,r),v,isLabel?S.inputLabel:S.input);
+    });
+    m3.push(mg(r,1,r,2)); m3.push(mg(r,4,r,6));
+    r++;
+  });
+  for(let c=0;c<7;c++) sc(ws3,addr(c,r),'',S.empty); r++;
+
+  // Monthly tracker table
+  fillRange(ws3,r,0,6,'📊  MONTHLY PERFORMANCE TRACKER',S.secHdr); m3.push(mg(r,0,r,6)); r++;
+  const mHdrs = ['Month / Date','Indicator','Target','Actual Value','Variance','Status','Actions Taken / Notes'];
+  mHdrs.forEach((h,c)=>sc(ws3,addr(c,r),h,S.colHdr)); r++;
+
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  months.forEach((mo,i)=>{
+    const isAlt = i%2===1;
+    sc(ws3,addr(0,r),mo,isAlt?S.bodyCAlt:S.bodyC);
+    sc(ws3,addr(1,r),'',isAlt?S.bodyAlt:S.bodyWrap);
+    sc(ws3,addr(2,r),'',S.input);
+    sc(ws3,addr(3,r),'',S.input);
+    sc(ws3,addr(4,r),'',S.input);
+    sc(ws3,addr(5,r),'',S.statNA);
+    sc(ws3,addr(6,r),'',S.input);
+    ws3['!rows']=ws3['!rows']||[]; ws3['!rows'][r]={hpt:26}; r++;
+  });
+  for(let c=0;c<7;c++) sc(ws3,addr(c,r),'',S.empty); r++;
+
+  // Trend notes
+  fillRange(ws3,r,0,6,'📝  TREND ANALYSIS & NOTES',S.secHdr); m3.push(mg(r,0,r,6)); r++;
+  ['Quarter','Key Observation','Root Cause (if gap)','Action Taken','Outcome','Reviewed By','Date'].forEach((h,c)=>sc(ws3,addr(c,r),h,S.colHdr)); r++;
+  ['Q1 (Jan–Mar)','Q2 (Apr–Jun)','Q3 (Jul–Sep)','Q4 (Oct–Dec)'].forEach((q,i)=>{
+    const isAlt=i%2===1;
+    sc(ws3,addr(0,r),q,isAlt?S.bodyCAlt:S.bodyC);
+    for(let c=1;c<7;c++) sc(ws3,addr(c,r),'',S.input);
+    ws3['!rows']=ws3['!rows']||[]; ws3['!rows'][r]={hpt:36}; r++;
+  });
+  for(let c=0;c<7;c++) sc(ws3,addr(c,r),'',S.empty); r++;
+
+  // Footer
+  fillRange(ws3,r,0,6,'Qualitypedia – OMAC  |  OMAC Developers by S M Baqir  |  syedbaqir291@gmail.com  |  © 2025 All Rights Reserved',S.footer);
+  m3.push(mg(r,0,r,6));
+
+  ws3['!ref'] = `A1:G${r+1}`;
+  ws3['!merges'] = m3;
+  ws3['!cols'] = [{wch:16},{wch:22},{wch:13},{wch:14},{wch:12},{wch:14},{wch:26}];
+  XLSX.utils.book_append_sheet(wb, ws3, '📊 Monitoring Log');
+
+  // ═══════════════════════════════════════════════════════════════
+  // SHEET 4 — FMEA / RISK REGISTER (bonus for proactive tools)
+  // ═══════════════════════════════════════════════════════════════
+  const ws4 = {};
+  const m4 = [];
+  r = 0;
+
+  fillRange(ws4,r,0,7,'QUALITYPEDIA – OMAC  |  Risk Register / FMEA Template',S.mainHdr); m4.push(mg(r,0,r,6));
+  sc(ws4,addr(7,r),'OMAC Developers by S M Baqir',S.mainHdrR); r++;
+  fillRange(ws4,r,0,7,`RISK REGISTER: ${t.icon} ${t.name}`,S.toolName); m4.push(mg(r,0,r,7)); r++;
+
+  for(let c=0;c<8;c++) sc(ws4,addr(c,r),'',S.empty); r++;
+
+  // FMEA table
+  fillRange(ws4,r,0,7,'⚠️  FAILURE MODE & EFFECTS ANALYSIS (FMEA)',S.secHdr); m4.push(mg(r,0,r,7)); r++;
+  const fmeaHdrs = ['Process Step','Failure Mode','Effect of Failure','Severity\n(1–10)','Occurrence\n(1–10)','Detectability\n(1–10)','RPN\n(S×O×D)','Recommended Action'];
+  fmeaHdrs.forEach((h,c)=>{ const s={...S.colHdr}; s.alignment={...s.alignment,wrapText:true}; sc(ws4,addr(c,r),h,s); });
+  ws4['!rows']=ws4['!rows']||[]; ws4['!rows'][r]={hpt:36}; r++;
+  for(let i=0;i<8;i++){
+    const isAlt=i%2===1;
+    for(let c=0;c<5;c++) sc(ws4,addr(c,r),'',isAlt?S.bodyAlt:S.input);
+    sc(ws4,addr(5,r),'',S.input);
+    sc(ws4,addr(6,r),'',{...S.bodyC, fill:fill(isAlt?'FFE8F4EE':'FFFFF8F0')});
+    sc(ws4,addr(7,r),'',S.input);
+    ws4['!rows']=ws4['!rows']||[]; ws4['!rows'][r]={hpt:30}; r++;
+  }
+  for(let c=0;c<8;c++) sc(ws4,addr(c,r),'',S.empty); r++;
+
+  // Risk matrix legend
+  fillRange(ws4,r,0,7,'🎨  RPN RISK LEGEND',S.secHdr); m4.push(mg(r,0,r,7)); r++;
+  const legend = [
+    ['RPN 1–50','Low Risk','Monitor only','FF1A6B3A','FFE8F4EE'],
+    ['RPN 51–100','Medium Risk','Plan corrective action','FF7A5200','FFFFF3CD'],
+    ['RPN 101–200','High Risk','Immediate action required','FF8B3208','FFFDE8E8'],
+    ['RPN > 200','Critical Risk','Stop and fix NOW','FF8B1A1A','FFFFE0E0'],
   ];
-  const ws3 = XLSX.utils.aoa_to_sheet(monitorData);
-  ws3['!cols'] = [{wch:15},{wch:30},{wch:12},{wch:15},{wch:12},{wch:25},{wch:18}];
-  XLSX.utils.book_append_sheet(wb, ws3, 'Monitoring Log');
-  
+  legend.forEach(([range,level,action,ftColor,bgColor])=>{
+    sc(ws4,addr(0,r),range,{font:font(9,true,ftColor),fill:fill(bgColor),alignment:align('center','center'),border:border()});
+    fillRange(ws4,r,1,2,level,{font:font(9,true,ftColor),fill:fill(bgColor),alignment:align('center','center'),border:border()});
+    m4.push(mg(r,1,r,2));
+    fillRange(ws4,r,3,7,action,{font:font(9,false,ftColor),fill:fill(bgColor),alignment:align('left','center'),border:border()});
+    m4.push(mg(r,3,r,7)); r++;
+  });
+  for(let c=0;c<8;c++) sc(ws4,addr(c,r),'',S.empty); r++;
+
+  fillRange(ws4,r,0,7,'Qualitypedia – OMAC  |  OMAC Developers by S M Baqir  |  syedbaqir291@gmail.com  |  © 2025 All Rights Reserved',S.footer);
+  m4.push(mg(r,0,r,7));
+
+  ws4['!ref'] = `A1:H${r+1}`;
+  ws4['!merges'] = m4;
+  ws4['!cols'] = [{wch:20},{wch:20},{wch:20},{wch:10},{wch:10},{wch:12},{wch:10},{wch:26}];
+  XLSX.utils.book_append_sheet(wb, ws4, '⚠️ Risk Register');
+
+  // ── WRITE FILE ────────────────────────────────────────────────
   XLSX.writeFile(wb, `Qualitypedia_${t.name.replace(/[^a-z0-9]/gi,'_')}_Template.xlsx`);
 }
 
