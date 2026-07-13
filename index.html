@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>Qualitypedia – OMAC | Quality Tools Encyclopedia</title>
+<meta name="description" content="The complete, practitioner-ready quality management tools encyclopedia — 69+ tools, CPHQ exam alignment, quizzes, and downloadable templates. By OMAC Developers · S M Baqir."/>
+<meta name="theme-color" content="#B5490F"/>
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="Qualitypedia"/>
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/>
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="icons/icon-16.png"/>
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png"/>
+<link rel="shortcut icon" href="icons/icon-32.png"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
+</head>
+<body>
+
+<div id="bubbleField"></div>
+
+<!-- WELCOME MODAL -->
+<div class="overlay active" id="welcomeOverlay">
+  <div class="modal-box">
+    <div class="modal-logo"><img src="icons/logo.png" alt=""/><span class="name">OMAC Analytics</span></div>
+    <h2>Welcome to Qualitypedia</h2>
+    <p class="sub">Please enter your details to access the complete Quality Tools encyclopedia.</p>
+    <div class="form-group"><label>Your Name</label><input type="text" id="inputName" placeholder="e.g. Ahmad Ali" autocomplete="name"/></div>
+    <div class="form-group"><label>Organization / Institution</label><input type="text" id="inputOrg" placeholder="e.g. XYZ Hospital / Organization" autocomplete="organization"/></div>
+    <div class="form-group"><label>Profession / Role</label><input type="text" id="inputRole" placeholder="e.g. Quality Manager, Nurse, Student"/></div>
+    <button class="btn-primary" onclick="registerUser()">Enter Qualitypedia →</button>
+  </div>
+</div>
+
+<!-- PROMO POPUP (CPHQ / ISO alternating) -->
+<div class="overlay" id="promoOverlay">
+  <div class="modal-box promo-box" id="promoBox"></div>
+</div>
+
+<!-- iOS INSTALL INSTRUCTIONS -->
+<div class="overlay" id="iosInstallOverlay">
+  <div class="modal-box" style="text-align:center">
+    <button class="modal-close-x" onclick="document.getElementById('iosInstallOverlay').classList.remove('active')">✕</button>
+    <div class="modal-logo" style="margin-left:auto;margin-right:auto"><img src="icons/logo.png" alt=""/><span class="name">Install App</span></div>
+    <h2>Add Qualitypedia to Home Screen</h2>
+    <p class="sub">1. Tap the Share icon in Safari's toolbar<br/>2. Scroll down and tap <b>"Add to Home Screen"</b><br/>3. Tap <b>Add</b> — done! 🎉</p>
+    <button class="btn-primary" onclick="document.getElementById('iosInstallOverlay').classList.remove('active')">Got it</button>
+  </div>
+</div>
+
+<nav id="topbar">
+  <div class="topbar-inner">
+    <div class="brand" onclick="showPage('tools')">
+      <div class="brand-icon"><img src="icons/logo.png" alt="OMAC logo"/></div>
+      <div class="brand-text"><span class="main">Qualitypedia</span><span class="sub">OMAC Analytics</span></div>
+    </div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" data-page="tools" onclick="showPage('tools')">📚 Tools</button>
+      <button class="nav-tab" data-page="edu" onclick="showPage('edu')">🎓 CPHQ &amp; ISO Prep</button>
+      <button class="nav-tab" data-page="quiz" onclick="showPage('quiz')">🧠 Quiz</button>
+      <button class="nav-tab" data-page="about" onclick="showPage('about')">👤 About</button>
+    </div>
+    <div class="topbar-right">
+      <button class="install-btn" id="installBtn" onclick="triggerInstall()" title="Install App">📲</button>
+      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" id="themeBtn">🌙</button>
+      <button class="omac-capsule" onclick="openOMACSite()" title="Visit OMAC main site">
+        <span class="pulse-wrap"><span class="dot"></span><span class="pulse-ring"></span></span>
+        <span class="label">OMAC Analytics</span>
+      </button>
+      <div class="user-chip" id="userChip" style="display:none">
+        <div class="user-avatar" id="userAva">?</div>
+        <span id="userChipName">Guest</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-eyebrow"><span>Comprehensive Quality Management Encyclopedia</span></div>
+  <h1>Every Quality Tool,<br/><em>All in One Place</em></h1>
+  <p class="tagline">From 5S to Six Sigma, RCA to PDCA — the most complete, practitioner-ready reference for healthcare and organizational quality improvement. Now with CPHQ alignment, downloadable templates, and self-test quizzes.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num" id="statTotal">69+</div><div class="lbl">Quality Tools</div></div>
+    <div class="hero-stat"><div class="num">10</div><div class="lbl">Categories</div></div>
+    <div class="hero-stat"><div class="num">2</div><div class="lbl">Approaches</div></div>
+    <div class="hero-stat"><div class="num" id="statUsers">38</div><div class="lbl">Users</div></div>
+  </div>
+</section>
+
+<div id="toolbar">
+  <div class="toolbar-inner">
+    <div class="search-wrap">
+      <span class="ico">🔍</span>
+      <input type="text" id="searchInput" placeholder="Search tools, categories, methods…" oninput="filterTools()"/>
+    </div>
+    <div class="filter-group">
+      <button class="filter-btn active" data-filter="all" onclick="setFilter(this,'all')">All</button>
+      <button class="filter-btn" data-filter="proactive" onclick="setFilter(this,'proactive')">🟢 Proactive</button>
+      <button class="filter-btn" data-filter="reactive" onclick="setFilter(this,'reactive')">🔴 Reactive</button>
+      <button class="filter-btn" data-filter="7qc" onclick="setFilter(this,'7qc')">7 QC Tools</button>
+      <button class="filter-btn" data-filter="lean" onclick="setFilter(this,'lean')">Lean</button>
+      <button class="filter-btn" data-filter="statistical" onclick="setFilter(this,'statistical')">Statistical</button>
+      <button class="filter-btn" data-filter="safety" onclick="setFilter(this,'safety')">Patient Safety</button>
+    </div>
+    <span class="result-count" id="resultCount"></span>
+  </div>
+</div>
+
+<div id="main" class="visible">
+  <div id="no-results" class="no-results">
+    <div class="big">🔎</div>
+    <p>No tools found for your search. Try different keywords.</p>
+  </div>
+</div>
+
+<!-- EDU HUB -->
+<div id="edu-page">
+  <div class="edu-intro">
+    <h2>🎓 CPHQ &amp; ISO 9001 Preparation</h2>
+    <p>Qualitypedia is your encyclopedia — these companion tools go deeper for exam prep and structured learning, built by the same OMAC team.</p>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <div class="ec-badge">Free Companion Tool</div>
+      <span class="ec-icon">📚</span>
+      <h3>CPHQ Preparation Hub</h3>
+      <p>Structured notes, practice questions, and statistical concepts mapped to the CPHQ content outline — built by a quality professional currently preparing for the exam.</p>
+      <button class="ec-btn" onclick="openCPHQ()">Launch CPHQ Prep Hub →</button>
+    </div>
+    <div class="edu-card">
+      <div class="ec-badge">Free Companion Tool</div>
+      <span class="ec-icon">📘</span>
+      <h3>Learn ISO 9001:2015</h3>
+      <p>A clause-by-clause walkthrough of ISO 9001:2015 for quality officers, students, and internal auditors-in-training.</p>
+      <button class="ec-btn" onclick="openISO()">Launch ISO 9001 Module →</button>
+    </div>
+  </div>
+</div>
+
+<!-- QUIZ PAGE -->
+<div id="quiz-page">
+  <div class="quiz-hero">
+    <h2>🧠 Quality Tools Quiz</h2>
+    <p>Test what you know — every question is drawn directly from the encyclopedia's own data.</p>
+  </div>
+  <div id="quizArea"></div>
+</div>
+
+<!-- ABOUT -->
+<div id="about-page">
+  <div class="about-card fade-up">
+    <div class="ava"><img src="icons/logo.png" alt="OMAC logo"/></div>
+    <h2>S M Baqir</h2>
+    <div class="role">OMAC Analytics — Founder &amp; Developer</div>
+    <p>OMAC Analytics is dedicated to building practical, accessible quality management tools for healthcare professionals, administrators, and quality officers.</p>
+    <p>Our mission is to make evidence-based quality tools available and understandable for every level of an organization — from frontline staff to C-suite executives.</p>
+    <div class="about-divider"></div>
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:16px;color:var(--text)">Contact &amp; Connect</h3>
+    <div class="about-links">
+      <a class="about-link" href="mailto:syedbaqir291@gmail.com">✉️ syedbaqir291@gmail.com</a>
+      <a class="about-link" href="https://pk.linkedin.com/in/syed-muhammad-baqir-7b822418a" target="_blank" rel="noopener">💼 LinkedIn — Syed M Baqir</a>
+      <a class="about-link" href="https://syedbaqir291-debug.github.io/OMAC/" target="_blank" rel="noopener">🌐 OMAC Main Site</a>
+    </div>
+    <div class="about-divider"></div>
+    <p style="font-size:.82rem;color:var(--text3)">© 2025 OMAC Developers by S M Baqir. All rights reserved.</p>
+  </div>
+</div>
+
+<!-- DETAIL PANEL -->
+<div id="detail-panel">
+  <div class="dp-header">
+    <div class="dp-icon" id="dpIcon">🔧</div>
+    <div class="dp-title-block">
+      <div class="dp-title" id="dpTitle">Tool Name</div>
+      <div class="dp-badges" id="dpBadges"></div>
+    </div>
+    <button class="dp-close" onclick="closePanel()">✕</button>
+  </div>
+  <div class="dp-body" id="dpBody"></div>
+  <div class="inapp-notice" id="inappNotice">
+    <strong>⚠️ Downloads blocked in this in-app browser</strong>
+    Open this page in Chrome or Safari to download PDF, Excel &amp; Word files. Tap ··· → "Open in browser"
+  </div>
+  <div class="dp-footer">
+    <button class="dl-btn pdf" onclick="downloadPDF()">📄 PDF</button>
+    <button class="dl-btn excel" onclick="downloadExcel()">📊 Excel</button>
+    <button class="dl-btn word" onclick="downloadWord()">📝 Word</button>
+  </div>
+</div>
+<div id="panelOverlay" style="position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:9989;display:none;backdrop-filter:blur(3px)" onclick="closePanel()"></div>
+
+<footer>
+  <strong>Qualitypedia – OMAC</strong> &nbsp;|&nbsp; <strong>OMAC Developers by S M Baqir</strong> &nbsp;|&nbsp; <span>syedbaqir291@gmail.com</span> &nbsp;|&nbsp; <span>© 2025 All Rights Reserved</span>
+</footer>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav id="bottomNav">
+  <div class="bn-inner">
+    <button class="bn-item active" data-page="tools" onclick="showPage('tools')"><span class="bn-ico">📚</span>Tools</button>
+    <button class="bn-item" data-page="edu" onclick="showPage('edu')"><span class="bn-ico">🎓</span>Prep</button>
+    <button class="bn-item" data-page="quiz" onclick="showPage('quiz')"><span class="bn-ico">🧠</span>Quiz</button>
+    <button class="bn-item" data-page="about" onclick="showPage('about')"><span class="bn-ico">👤</span>About</button>
+  </div>
+</nav>
+
+<div id="toastHost"></div>
+
+<script src="data.js"></script>
+<script src="enrich.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
